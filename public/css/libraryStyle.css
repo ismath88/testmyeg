@@ -1,0 +1,3983 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Raleway', sans-serif !important;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body button,
+body a,
+body ul,
+body span {
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+}
+.hide{
+    display: none!important;
+}
+body a:hover {
+    text-decoration: none;
+}
+
+body button:focus {
+    outline: none;
+}
+
+.pinkBgColor {
+    background: #B80D48;
+}
+
+.pinkColor {
+    color: #B80D48;
+}
+
+.greenBgColor {
+    background: #2B6A6C;
+}
+
+.greenColor {
+    color: #2B6A6C;
+}
+.c-app {
+    padding-right: 0px !important;
+}
+.c-main{
+	height: 100%;
+}
+.ieltsAcademicRow {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 2px rgb(0 82 180 / 15%);
+    position: relative;
+}
+.insertContent.insertContent p.insertP.blueMessage {
+    margin: 5px 0px!important;
+}
+.practiceExamOption .optionCheck input+label.error {
+    color: #B80D48;
+    font-size: 14px;
+    width: 200px;
+}
+.practiceExamOption .optionRadio .optionRadioBtn input+label.error {
+    color: #B80D48;
+    position: absolute;
+    width: 200px;
+    left: -18px;
+    right: 0px;
+    bottom: -25px;
+    font-weight: 600;
+}
+.practiceExamOption .optionRadio .optionRadioBtn {
+    position: relative;
+}
+span.backBtnTutorial a {
+    color: #abd3ff;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 30px;
+}
+.documentLinks,.documentLinks:hover,.documentLinks:active,.documentLinks:focus  {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 136.4%;
+    letter-spacing: 0.05em;
+    color: #262D37;
+    display: flex;
+}
+span.backBtnTutorial i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.ieltsAcademicRow h3 {
+      margin: 0;
+    margin-top: -2px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 136.4%;
+}
+
+.ieltsAcademicRow h3 a,.ieltsAcademicRow h3 a:hover
+ {
+    font-size: 18px;
+    color: #4da1ff;
+}
+
+.ieltsAcademicRow h4 {
+      text-transform: uppercase;
+    font-size: 14px;
+    margin: 0;
+    color: #9a9c9f;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.tabbsHead ul.nav-tabs li a {
+     font-size: 16px;
+    color: #000;
+    padding: 12px 50px;
+    display: inline-block;
+    font-weight: 500;
+    min-width: 215px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    line-height: 136.4%;
+}
+
+.tabbsContent .tab-content .fade {
+    opacity: 1;
+}
+
+.tabbsHead ul.nav-tabs li.active a {
+    color: #fff;
+}
+
+.tabbsHead ul.nav-tabs li.tutorialLi.active a {
+    background: #f4ac6c;
+}
+
+.tabbsHead ul.nav-tabs li.practiceExamsLi.active a {
+    background: #b80d48;
+}
+
+.tabbsHead ul.nav-tabs li.studyMaterialsLi.active a {
+    background: #2b6a6c;
+}
+.tutorialTabs .tabbsHead {
+    background: #FFFFFF;
+    box-shadow: 1px 4px 20px rgb(0 82 180 / 15%);
+}
+.tabbsHead ul.nav-tabs {
+    border: 0;
+   /* box-shadow: 0 7px 13px 6px #ececec;*/
+    background: #fff;
+}
+
+.tutorialTabs {
+    height: calc(100vh - 46px);
+    background: #f8f8f8;
+}
+
+.noContentBox {
+   position: absolute;
+    top: 40%;
+    left: 0;
+    text-align: center;
+    right: 0;
+    transform: translateY(-40%);
+}
+
+.tabbsContent .tutorialInnerContent {
+    height: calc(100vh - 94px);
+    position: relative;
+    padding: 35px 50px;
+}
+
+.noContentBox h4 {
+    color: #BDBDBD;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24.2119px;
+        line-height: 136.4%;
+   letter-spacing: 0.05em;
+    margin-bottom: 15px;
+}
+
+.noContentBox .addTutorialBtn {
+    color: #fff;
+    padding: 18px 40px;
+    min-width: 320px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 9px 0px #ccc;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 25.5881px;
+    line-height: 136.4%;
+}
+
+.tutorialTabbBox .noContentBox .addTutorialBtn:hover {
+    background: #e69a55;
+}
+
+.tutorialTabbBox .noContentBox .addTutorialBtn {
+    background: #f4ac6c;
+    border: 1px solid #f4ac6c;
+    display: inline-block;
+}
+
+.practiceInnerContent .noContentBox .addTutorialBtn:hover {
+    background: #a90c42;
+}
+
+.practiceInnerContent .noContentBox .addTutorialBtn {
+    background: #b80d48;
+    border: 1px solid #b80d48;
+    display: inline-block;
+}
+
+.studyInnerContent .noContentBox .addTutorialBtn:hover {
+    background: #215556;
+}
+
+.studyInnerContent .noContentBox .addTutorialBtn {
+    background: #2b6a6c;
+    display: inline-block;
+    border: 1px solid #2b6a6c;
+}
+
+.ieltsAcademicRow span.backBtnTutorial {
+    margin-left: 25px;
+}
+
+.tutorialTabBtn {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tutorialTabBtn .tutorialHeadButtons {
+    display: flex;
+    align-items: center;
+}
+
+.tutorialHeadButtons .showAllbtn {
+    background: #fff;
+    border: 0px solid;
+    min-height: 45px;
+    padding: 0 22px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.practiceInnerContent .tutorialHeadButtons .showAllbtn {
+    color: #b80d48;
+    box-shadow: 0 0 5px 0px #b80d48;
+     border-radius: 4px;
+    line-height: 45px;
+}
+
+.studyInnerContent .tutorialHeadButtons .showAllbtn {
+    color: #2b6a6c;
+    box-shadow: 0px 0px 6px rgba(43, 106, 108, 0.8);
+    border-radius: 4px;
+    line-height: 45px;
+}
+
+.tutorialTabBtn .tutorialHeadButtons .form-group {
+    margin: 0;
+    position: relative;
+    background: #fff;
+}
+
+.tutorialTabBtn .tutorialHeadButtons .form-group:after {
+    content: "\f107";
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    right: 0;
+    font-size: 21px;
+    height: 45px;
+    width: 40px;
+    text-align: center;
+    padding: 8px 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 0;
+}
+
+.practiceInnerContent .tutorialTabBtn .tutorialHeadButtons .form-group:after {
+    color: #b80d48;
+    background: #f8e7ed;
+    border: 1px solid #e4cad3
+}
+
+.studyInnerContent .tutorialTabBtn .tutorialHeadButtons .form-group:after {
+    color: #2b6a6c;
+    background: #eaf0f0;
+    border: 1px solid #d3e4e4;
+}
+
+.tutorialTabBtn .tutorialHeadButtons .form-group select {
+    min-height: 45px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 210px;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    color: #444444;
+}
+
+.practiceInnerContent .tutorialTabBtn .tutorialHeadButtons .form-group select {
+    box-shadow: 0 0 5px 0px #b80d48;
+}
+
+.studyInnerContent .tutorialTabBtn .tutorialHeadButtons .form-group select {
+    box-shadow: 0px 0px 3px rgba(189, 189, 189, 0.8);
+    border-radius: 4px;
+}
+
+.tutorialTable table.table tbody tr td {
+    border: 0;
+    padding: 20px 20px;
+}
+
+.tutorialTabBtn .tutorialAddBtn {
+    color: #fff;
+    padding: 8px 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    min-height: 45px;
+}
+
+.tutorialTabbBox .tutorialTabBtn .tutorialAddBtn {
+    background: #f4ac6c;
+    border: 1px solid #f4ac6c;
+}
+
+.practiceInnerContent .tutorialTabBtn .tutorialAddBtn {
+    background: #b80d48;
+    border: 1px solid #b80d48;
+     border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.studyInnerContent .tutorialTabBtn .tutorialAddBtn {
+    background: #2b6a6c;
+    border: 1px solid #2b6a6c;
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.tutorialTable table.table thead th {
+    font-size: 12px;
+    color: #bdbdbd;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+}
+
+.tutorialTable table.table tr td,
+.tutorialTable table.table tr th {
+    width: 25%;
+}
+
+.tutorialTable table.table tr td:first-child,
+.tutorialTable table.table tr th:first-child {
+    width: 50%;
+}
+
+.tutorialTable table.table tbody tr td+td+td+td {
+    text-align: center;
+}
+
+.tutorialTable table.table tbody tr td+td+td {
+    color: #262D37!important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tutorialTable table.table tbody tr td {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.tutorialTable table.table tbody tr td+td+td+td+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tutorialTable table.table thead tr {
+    display: flex;
+}
+
+.tutorialTable table.table tbody tr {
+    background: #ffffff;
+    border-radius: 10px;
+    /*box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.07)*/
+    ;
+    box-shadow: 0 0 10px 3px #efefef;
+    padding: 0px;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.tutorialInnerContent .tutorialTable button.viewDetailBtn {
+    background: #fff;
+    padding: 6px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tutorialTabbBox .tutorialTable button.viewDetailBtn {
+    color: #f4ac6c;
+    border: 1px solid #f4ac6c;
+}
+
+.practiceInnerContent .tutorialTable button.viewDetailBtn {
+    color: #b80d48;
+    border: 1px solid #b80d48;
+}
+
+.studyInnerContent .tutorialTable button.viewDetailBtn {
+    color: #2b6a6c;
+    border: 1px solid #2b6a6c;
+}
+
+.tutorialInnerContent .tutorialTable {
+    height: calc(100% - 30px);
+    overflow: auto;
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+.tableScroll {
+    scrollbar-width: thin;
+    /* "auto" or "thin"  */
+    scrollbar-color: #29f0b4 transparent;
+    /* scroll thumb & track */
+}
+#practiceExams .tableScroll {
+    scrollbar-width: thin;
+    /* "auto" or "thin"  */
+    scrollbar-color: #b80d48 transparent;
+    /* scroll thumb & track */
+}
+
+div#studyMaterials .tutorialTable {
+    scrollbar-width: thin;
+    /* "auto" or "thin"  */
+    scrollbar-color: #2b6a6c transparent;
+    /* scroll thumb & track */
+}
+.tableScroll::-webkit-scrollbar-thumb {
+    background: #b7bdcb;
+    outline: 1px solid #b7bdcb;
+}
+
+.tableScroll::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+.tableScroll::-webkit-scrollbar-thumb:hover {
+    background: #b7bdcb;
+    outline: 1px solid #b7bdcb;
+}
+
+
+/*===== Start Landing page css =====*/
+
+.courseContent .fade {
+    opacity: 1;
+}
+
+.landingPageCourse {
+    padding: 35px 110px 35px 50px;
+    background: #f8f8f8;
+    height: 100%;
+}
+
+.addCourseRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.courseNameSave .addCourseBtn:hover {
+    background: #59a2f5;
+    color: #fff;
+}
+
+.courseNameSave button.alertConfirm {
+    background: #FD2A2A;
+    border: 1px solid #FD2A2A;
+    margin-left: 15px;
+}
+
+.courseNameSave button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 40px;
+    min-width: 240px;
+    border-radius: 4px;
+}
+
+.courseNameSave .addCourseBtn {
+    background: #4DA1FF;
+    border: 1px solid #4DA1FF;
+}
+
+.courseNameSave {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.courseGridListBtn ul.nav-tabs {
+    border: 0;
+}
+
+.courseGridListBtn ul.nav-tabs a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 3px 0 #ccc;
+    font-size: 21px;
+    color: #1e2027;
+    border-radius: 5px;
+    position: relative;
+}
+
+.courseGridListBtn ul.nav-tabs li.listLi {
+    margin-left: 10px;
+}
+
+.courseGridListBtn ul.nav-tabs li.active a {
+    background: #4da1ff;
+    color: #fff;
+}
+
+.contentGrid {
+    display: flex;
+    margin: 0 -5px;
+    flex-wrap: wrap;
+}
+
+.landingPageCourse .courseContent .tab-content>.active {
+    margin: 0;
+}
+
+.contentGrid .courseBox {
+    width: calc(25% - 10px);
+    background: #fff;
+    margin: 0 5px 10px;
+    min-height: 148.19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6.73571px;
+    position: relative;
+    box-shadow: 0px 2.24524px 4.49048px rgb(0 42 44 / 20%);
+    border: 0.56131px solid rgba(77, 161, 255, 0.8);
+    opacity: 0.8;
+}
+
+
+
+.courseText h3 {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #4DA1FF;
+    font-weight: 600;
+    padding: 15px 15px 0px 15px;
+        word-break: break-all;
+}
+.contentGrid .courseBox .courseText {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.courseText span.cousrseStart {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #9a9c9f;
+    letter-spacing: 1px;
+}
+
+.courseBox span.courseEdit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 13px;
+}
+
+.courseBox span.courseEdit a {
+    font-size: 21px;
+    color: #b5b5b5;
+    border-bottom: 2px solid #b5b5b5;
+}
+
+ul.listUl {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #b1d6ff;
+    border-radius: 5px;
+    background: #fff;
+}
+
+ul.listUl li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b1d6ff;
+    padding: 20px 25px;
+}
+
+ul.listUl li:last-child {
+    border-bottom: 0;
+}
+
+.listUl h3 {
+    margin-bottom: 0;
+    width: 50%;
+}
+
+.listUl h3 a {
+    font-size: 18px;
+    color: #4DA1FF;
+    font-weight: 700;
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;	
+}
+
+.listUl h3 span.coursestart {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #9a9c9f;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+ul.listUl .cousrseUpdate span.courseUpdateDate {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444;
+}
+
+ul.listUl .cousrseUpdate {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cousrseUpdate .courseEdit a {
+    font-size: 21px;
+    color: #b5b5b5;
+    border-bottom: 2px solid #b5b5b5;
+}
+
+.siteOnOffBtn .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 18px;
+    margin: 0;
+}
+
+.siteOnOffBtn .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.siteOnOffBtn .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8e8e8e;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.siteOnOffBtn .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: -4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    right: 0;
+    left: -5px;
+    box-shadow: 0 1px 2px 0px #a2a2a2;
+}
+
+.siteOnOffBtn input:checked+.slider {
+    background-color: #8dc7f6;
+}
+
+.siteOnOffBtn input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.siteOnOffBtn input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.siteOnOffBtn .slider.round {
+    border-radius: 34px;
+}
+
+.siteOnOffBtn .slider.round:before {
+    border-radius: 50%;
+}
+
+.siteOnOffBtn input:checked+.slider:before {
+    background: #2c98f0;
+}
+
+.courseSelectLevel .checkcontainer {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    color: #000;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.checkcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radiobtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #4da1ff;
+}
+
+.checkcontainer input:checked~.radiobtn:after {
+    display: block;
+}
+
+.checkcontainer .radiobtn:after {
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.radiobtn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkcontainer input:checked~.radiobtn {
+    background-color: #4da1ff;
+}
+
+.editCourseDetail {
+    background: #4da1ff;
+    display: flex;
+    align-items: center;
+    padding: 11px 25px;
+}
+
+.editCourseDetail h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.courseDetailInner {
+    padding: 50px 50px 55px;
+    background: #fefefe;
+    height: 100%;
+}
+
+.courseDetailPage {
+    background: #f8f8f8;
+    height: 100%;
+}
+
+.courseField {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.courseField .courseInput {
+    width: 50%;
+}
+
+.courseField .courseHide {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.courseInput .form-group label,
+.courseHide label,
+.courseSelectLevel label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #323c47;
+    margin-bottom: 25px;
+}
+
+.courseInput input.form-control {
+    min-height: 45px;
+}
+
+.courseHide .courseHideBtn {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.courseInput .form-group {
+    margin-bottom: 0;
+}
+
+.courseSelectLevel .radioBoxSec {
+    margin-bottom: 20px;
+}
+
+.courseDetailInner .addCourseNewName .form-group input.form-control {
+    border: 1px solid #4DA1FF;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c454c;
+}
+
+.courseDetailInner .addCourseNewName .form-group input.form-control:focus {
+    box-shadow: none;
+}
+
+.courseDetailInner .addCourseNewName .form-group input.form-control::placeholder {
+    font-size: 13px;
+}
+
+.courseDetailInner form.newCourseAddForm {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+span.help-block-error {
+    font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+        width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+#exam_limit-error,
+#exam_title-error ,
+#question_title-error,
+#answer_format-error,
+.uploadMaterialError,
+.uploadAssignmentError,
+.uploadFileError,
+#courses_title-error,
+
+.uploadAnswerError,
+.uploadVideoError
+{
+    font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+        width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+.uploadMaterialError,
+.uploadAssignmentError,
+.uploadFileError,
+.uploadAnswerError,
+.uploadVideoError {
+    padding-left: 10px;
+    padding-top: 0px!important;
+}
+#addTutorialMaterial .fileUploadRow .uploadBtn, {
+    width: 154px;
+}
+#addTutorialMaterial .fileUploadRow,
+#addTutorialAssignment .fileUploadRow,
+#questionModel .fileUploadRow,
+#answerModel .fileUploadRow,
+#add_tutorial .fileUploadRow {
+    justify-content: flex-start;
+}
+.studymat-layout-wrapper .portlet .portlet-body .formatUpload {
+    margin-top: 30px;
+}
+#insertConfirmed .modal-dialog .modal-body {
+    padding: 0;
+}
+
+.modal.fade:not(.show) {
+    opacity: 1;
+}
+
+#insertConfirmed .modal-dialog .modal-content {
+    border-radius:4px;
+    border: 0;
+}
+
+#insertConfirmed .modal-dialog .courseNameHead h3.insertHeading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#insertConfirmed .modal-dialog .courseNameHead {
+    background: #4DA1FF;
+    padding: 14px 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#insertConfirmed .insertContent h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+#insertConfirmed .insertContent p.insertP {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#insertConfirmed .insertContent {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#insertConfirmed .modal-dialog {
+    min-width: 734px;
+}
+
+#insertConfirmed .modal-dialog .modal-content .modal-footer {
+    text-align: center;
+    padding: 25px 0;
+}
+
+#insertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn {
+    margin: 0;
+    width: 100%;
+}
+
+#insertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary {
+    min-width: 235px;
+    border: 1px solid #2B6A6C;
+    border-radius: 4px;
+    background: #fff;
+    color: #2B6A6C;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 0;
+}
+
+#insertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #2B6A6C;
+    color: #fff;
+}
+
+
+/*===== End Landing page css =====*/
+
+
+/*===== Start Study Course Detail Css =====*/
+
+.studyDetailBar {
+    background: #2b6a6c;
+    justify-content: space-between;
+}
+
+.studyDetailBar .studyBarLeft {
+    display: flex;
+    align-items: center;
+}
+
+.studyBarLeft .siteOnOffBtn .slider:before {
+    width: 20px;
+    height: 20px;
+    bottom: -2px;
+    left: -8px;
+    background: #b7b7b7;
+}
+
+.studyBarLeft .siteOnOffBtn .switch {
+    width: 30px;
+    height: 15px;
+    top: 5px;
+}
+
+.studyBarLeft .siteOnOffBtn {
+    margin-left: 25px;
+    position: relative;
+    top: 11px;
+}
+
+.studyBarBtn a.studyBtn.studyEditBtn {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    color: #2B6A6C;
+    border-radius: 4px;
+    padding: 6px 47px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
+}
+
+.studyBarBtn .studyBtn {
+    background: transparent;
+    border: 1px solid #94b3b4;
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 38px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.studyBarBtn button.studyEditBtn {
+    background: #fff;
+    color: #2b6a6c;
+    margin-left: 10px;
+}
+
+.studyBarLeft .siteOnOffBtn .slider {
+    background: #f5f5f5;
+}
+
+.studyBarLeft .siteOnOffBtn input:checked+.slider {
+    background: #95b4b6;
+}
+
+.studyBarLeft .siteOnOffBtn input:checked+.slider:before {
+    background: #ffffff;
+}
+
+.studyDetailBar span.backBtnTutorial a {
+    color: #7ba1a3;
+}
+
+.studyMatName h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1E2027;
+    margin-bottom: 30px;
+}
+
+.studyMatContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.studyMatContent h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #BDBDBD;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.studyMatContent .studyMatDec {
+    width: 50%;
+    padding-right: 100px;
+}
+
+.studyMatContent .studyMatText {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.studyMatDec p,
+.studyMatType p {
+    font-size: 14px;
+    color: #323C47;
+    font-weight: 500;
+    margin: 0;
+}
+
+.studyMatType i {
+    margin-right: 5px;
+    color: #DADADA;
+    font-size: 14px;
+}
+
+.studyMatNameBox {
+    border-bottom: 1px solid #dedede;
+}
+
+.studyMatTable h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2B6A6C;
+}
+
+.studyMatInner table.table th {
+    border-top: 0;
+    border-bottom: 1px solid #dedede;
+}
+
+.studyMatInner table.table {
+    margin: 0;
+    width: 80%;
+}
+
+.studyMatInner table.table th {
+    border-top: 0;
+    border-bottom: 1px solid #dedede;
+    font-size: 12px;
+    color: #808080;
+    font-weight: 700;
+}
+
+.studyMatInner table.table td+td+td,
+.studyMatInner table.table td+td+td+td,
+.studyMatInner table.table th+th+th,
+.studyMatInner table.table th+th+th+th {
+    text-align: center;
+}
+
+.studyMatInner table.table th:first-child,
+.studyMatInner table.table td:first-child {
+    padding-left: 0;
+}
+
+.studyMatInner table.table th:nth-child(2) {
+    width: 40%;
+}
+
+.studyMatInner table.table td {
+    font-size: 14px;
+    color: #323C47;
+    font-weight: 300;
+    border: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.studyMatTable .studyMatInner {
+    height: 420px;
+    overflow: auto;
+    scrollbar-width: thin;
+scrollbar-color: #2b6a6c transparent;
+}
+
+.courseNameRow h2 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.courseNameRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 20px 50px;
+}
+
+.courseNameRow .bancelBtn {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.courseNameInner {
+    padding: 40px 100px 50px 50px;
+}
+
+.courseNameInner .courseNameField {
+    background: #fff;
+    box-shadow: 1px 4px 10px #e4d0d7;
+    border-radius: 8px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.courseNameField .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.courseNameField .form-group label {
+    width: 150px;
+    font-size: 14px;
+    margin: 0;
+    color: #323C47;
+    font-weight: 700;
+    padding: 12px 0;
+    text-transform: uppercase;
+    min-width: 150px;
+}
+
+.courseNameField .form-group .courseRightField {
+    width: 100%;
+}
+
+.courseNameField .form-group .courseSelectBox {
+    margin: 0;
+    position: relative;
+    background: #fff;
+}
+
+.courseNameField .form-group .courseSelectBox .form-control {
+    min-height: 45px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #dca7b9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+ 
+    font-weight:500;
+}
+
+.courseNameField .form-group .courseSelectBox:after {
+    color: #808FA3;
+    background: #f8e7ed;
+    border-left: 1px solid #dca7b9;
+    content: "\f107";
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    right: 0;
+    font-size: 21px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    padding: 8px 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 0;
+}
+
+.courseNameField .form-group .courseSelectBox .form-control:focus {
+    box-shadow: none;
+}
+
+.courseNameField .form-group .courseRightField .form-control:focus {
+    box-shadow: none;
+}
+
+.courseNameInput input.form-control {
+    min-height: 45px;
+    border: 1px solid #dca7b9;
+}
+
+.courseNameInput input.form-control:focus {
+    box-shadow: none;
+}
+
+.courseNameField .courseTimeLimit {
+    border-bottom: 1px solid rgba(189, 189, 189, 0.5);
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+}
+
+.courseNameField .form-group .adjoined-bottom div#cke_editor {
+    border: 1px solid #dca7b9;
+}
+
+.courseNameField .form-group .adjoined-bottom div#cke_editor span#cke_1_top {
+    border-bottom: 1px solid #dca7b9;
+}
+
+.questionsRow .addQuestionBtn {
+    background: #B80D48;
+    font-size: 18px;
+    color: #fff;
+    border: 0;
+    padding: 10px 30px;
+    height: 51px;
+    width: 223px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.questionsRow .addQuestionBtn:disabled,
+.questionsRow .addQuestionBtn.disabled {
+  background: #B5B5B5;
+}
+.questionsRow .addQuestionBtn:hover {
+    background: #B80D48;
+}
+
+.questionsRow {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.courseNameRow .completeBtn {
+    color: #C1C1C1;
+    margin-left: 40px;
+}
+
+.checkcontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.practiceExamRow {
+    padding: 20px 50px 20px 50px;
+}
+
+.practiceExamBeg {
+    background: #fff;
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 10%);
+    position: relative;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.practiceExamBeg span.editIcon {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.practiceExamBeg span.editIcon a {
+    font-size: 21px;
+    color: #b5b5b5;
+    border-bottom: 2px solid #b5b5b5;
+}
+
+.practiceExamBeg .beginnerIELTS {
+    width: 50%;
+}
+
+.practiceExamBeg .beginnerReadingText {
+    width: 50%;
+}
+
+.beginnerIELTS h3 {
+    font-size: 20px;
+    color: #B80D48;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.beginnerIELTS p {
+    margin: 0;
+    font-size: 16px;
+    color: #B80D48;
+}
+
+.beginnerReadingText h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.beginnerReadingText p {
+    font-weight:500;
+    font-size: 14px;
+    color: #444444;
+}
+
+.practiceExamSec hr {
+    margin: 40px 0 0;
+    border-top: 2px solid rgba(189, 189, 189, 0.6);
+}
+
+.practiceExamInner {
+    background: #fff;
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 10%);
+    position: relative;
+    padding: 25px 35px;
+    border-radius: 5px;
+}
+
+.practiAnsQues .form-group {
+    width: 60%;
+    margin: 0 10px;
+}
+
+.practiAnsQues .form-group.selectBoxPractice {
+    width: 40%;
+}
+
+.practiAnsQues .form-group .form-control:focus,
+.selectBoxPractice .selectBoxInner .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #dca7b9;
+}
+
+.practiAnsQues .form-group input.form-control:focus {
+    background: rgba(184, 13, 72, 0.05)
+}
+
+.practiAnsQues {
+    display: flex;
+    margin: 0 -10px;
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.practiAnsQues .form-group .form-control {
+    min-height: 45px;
+    font-size: 14px;
+}
+
+.selectBoxPractice .selectBoxInner {
+    margin: 0;
+    position: relative;
+    background: #fff;
+}
+
+.selectBoxPractice .selectBoxInner .form-control {
+    min-height: 45px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dca7b9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.selectBoxPractice .selectBoxInner:after {
+    color: #808FA3;
+    background: #f8e7ed;
+    border-left: 1px solid #dca7b9;
+    content: "\f107";
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    right: 0;
+    font-size: 21px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    padding: 8px 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 0;
+}
+
+.inputFPractice input {
+    background: rgba(184, 13, 72, 0.05);
+    border: 1px solid #dca7b9;
+}
+
+.inputFPractice {
+    position: relative;
+}
+
+.inputFPractice .ImgIcon {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: #fff;
+    height: 43px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #dca7b9;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.inputFPractice .ImgIcon:hover,
+.inputFPractice .ImgIcon:focus {
+    background: #fff;
+    border-left: 1px solid #dca7b9;
+    box-shadow: none;
+}
+
+.inputFPractice .ImgIcon.btn-primary:not(:disabled):not(.disabled):active {
+    background: #fff;
+    border-left: 1px solid #dca7b9;
+    box-shadow: none;
+}
+
+.practiAnsQues label {
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: #323C47;
+    font-weight: 700;
+}
+
+.examOptionRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.examOptionRow .optionRadio {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.optionCheck {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.examOptionRow .optionCheck input.form-control:focus {
+    box-shadow: none;
+}
+
+.examOptionRow .optionCheck input.form-control {
+    padding: 0;
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+}
+
+.optionCheck h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.optionCross .crossBtn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.optionRadioBtn label.checkcontainer {
+    margin: 0;
+    font-size: 11px;
+    color: #BDBDBD;
+    font-weight: 700;
+    padding-left: 0;
+    padding-right: 30px;
+    width: 78px;
+    line-height: 13px;
+}
+
+.optionRadioBtn label.checkcontainer span.radiobtn {
+    right: 0;
+    left: unset;
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    border-radius: 5px;
+    top: 3px;
+}
+
+.optionCross {
+    padding: 6px 15px 6px 15px;
+    border-left: 1px solid #EDEDED;
+    margin-left: 20px;
+}
+
+.optionRadioBtn {
+    border-left: 1px solid #EDEDED;
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.examOptionRow:last-child {
+    margin-bottom: 0;
+}
+
+.optionRadioBtn label.checkcontainer input:checked~.radiobtn {
+    background-color: #B80D48;
+    border: 1px solid #B80D48;
+    border-radius: 50%;
+}
+
+.optionCheck span.optionCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #B80D48;
+    border-radius: 50%;
+    margin-right: 20px;
+        min-width: 20px;
+    max-width: 20px;
+}
+
+.practiceExamOption {
+    border-bottom: 1px solid #B80D48;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.addNewOption .optionCheck .optionCircle {
+    border: 2px solid #BDBDBD;
+}
+
+.addNewOption .optionCheck h3 {
+    color: #959595;
+    cursor: pointer;
+}
+
+.typingOptionImg img {
+    cursor: pointer;
+}
+
+.addNewOption {
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 25px;
+}
+
+.practiceExamDone {
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.practiceExamDone .examDoneBtm {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #B80D48;
+    font-size: 18px;
+}
+
+.practiceExamDone span.delExam {
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+}
+
+.practiceExamDone span.delExam .examDelBtm {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/*===== End Study Course Detail Css =====*/
+
+
+/*===== Start Model CSS =====*/
+
+.modal-backdrop.fade {
+    opacity: 1!important;
+    background: rgba(0, 0, 0, 0.3)!important;
+    transition: opacity .15s linear;
+}
+
+div#questionModel {
+    opacity: 1;
+}
+
+#questionModel .modal-dialog.modal-dialog-centered {
+    transform: translate(0, 0%);
+    max-width: 730px;
+}
+
+.questionModelBody .fileUploadRow .uploadBtn label {
+    display: inline-block;
+    background-color: #fff;
+    color: #B80D48;
+    padding: 11px 0;
+    cursor: pointer;
+    border: 1px solid #dca7b9;
+    min-height: 43.2px;
+    height: 43.2px!important;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.fileUploadRow .uploadBtn {
+    width: 185px;
+}
+
+.questionModelPopInner .questionModelHead h5 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#questionModel .modal-dialog.modal-dialog-centered .questionModelPopInner {
+    border-radius: 5px;
+    border: 0;
+}
+
+.questionModelPopInner .questionModelHead {
+    background: #B80D48;
+    padding: 12px 40px;
+}
+
+.questionModelPopInner .questionModelBody {
+    padding: 30px 40px;
+}
+
+.questionURL .form-group label {
+    width: 140px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #323C47;
+    min-width: 140px;
+}
+
+.questionURL .form-group .popUpUrl,
+.questionURL .form-group .fileUploadRow {
+    width: 100%;
+}
+
+.questionURL .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.questionURL span.orDivider {
+    font-size: 14px;
+    color: #B5B5B5;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.questionURL .form-group .fileUploadRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questionURL .form-group .fileUploadRow .uploadFileName {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 70px);
+    border: 1px solid #bbbbbb;
+    opacity: 0.8;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+.questionURL .form-group .fileUploadRow .uploadFileName p {
+    margin: 0;
+}
+
+.fileUploadRow .uploadFileName .uploadDel {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.questionModelPopInner .fileUploadBtn {
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.questionModelPopInner .fileUploadBtn .btn {
+    width: 160px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 0;
+    border: 1px solid #B80D48;
+    background: #fff;
+    color: #B80D48;
+}
+
+.questionModelPopInner .fileUploadBtn .btn.btn-primary {
+    background: #B80D48;
+    color: #fff;
+}
+.questionModelBody .fileUploadRow .uploadVideoBtn label{
+	height: 43.2px!important;
+	min-height: 43.2px!important;
+	font-size: 13px!important;
+}
+.questionModelPopInner .fileUploadBtn .btn:focus {
+    background: inherit;
+    color: inherit;
+    box-shadow: none;
+}
+
+.questionModelPopInner .fileUploadBtn .btn:focus {
+    background: inherit;
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+.questionModelPopInner .fileUploadBtn .btn-secondary:not(:disabled):not(.disabled):active {
+    background: inherit;
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+.questionModelPopInner .fileUploadBtn .btn.btn-primary:not(:disabled):not(.disabled):active,
+.questionModelPopInner .fileUploadBtn .btn.btn-primary:focus {
+    background: #B80D48;
+    color: #fff;
+    box-shadow: none;
+    border: 1px solid #B80D48;
+}
+
+.deleteConfirmPopup .modal-body {
+    padding: 0;
+}
+
+.delCourseHeadPop {
+    background: #FD2A2A;
+    padding: 19px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+div#alertConfirm .modal-content {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+div#alertConfirm .modal-content .modal-footer {
+    padding: 25px 0px;
+}
+
+.delCourseHeadPop h3.deleteHeading {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.deleteConfirmPopup .deletePopContent h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.deleteConfirmPopup .deletePopContent p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    width: 250px;
+    display: inline-block;
+}
+
+.deleteConfirmPopup .modal-body .deletePopContent {
+    text-align: center;
+    padding: 56px 0;
+}
+
+
+/*===== End Model CSS =====*/
+
+.newPracticeQuestion {
+    padding-top: 0;
+}
+
+.newPracticeAdBtn {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.newPracticeAdBtn .praticeAddQuestion {
+    background: #fff;
+    border: 1px solid #B80D48;
+    color: #B80D48;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px 20px;
+    max-width: 210px;
+    width: 100%;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.newPracticeMulQue {
+    padding-bottom: 30px;
+}
+
+.practiceQuestionHead h3 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+
+.questionTextRight p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #BDBDBD;
+    text-align: right;
+}
+
+.practiceQuestionList {
+    background: #fff;
+    padding: 25px 35px;
+    box-shadow: 0px 2px 9px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    margin-top:4px;
+    cursor: pointer;
+}
+
+.practiceQuestionHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.multiQuestionList ul {
+    padding: 0;
+    margin: 0;
+}
+
+.multiQuestionList ul li {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.multiQuestionList ul li.active {
+    color: #B80D48;
+}
+
+.multiQuestionList ul li.active i {
+    margin-left: 10px;
+}
+
+.multiQuestionList ul li .optionCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #B80D48;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.multiQuestionList ul li .editDelBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.multiQuestionList ul li .editDelBtn .btn,
+.multiSampleAns ul li span.editDelBtn .btn {
+    background: transparent;
+    padding: 0;
+    border: 0;
+}
+.multiQuestionList ul li .editDelBtn .delBtn{
+    margin-left: 15px;
+}
+.multiSampleAns ul li span.editDelBtn .delBtn {
+    margin-left: 0px;
+    padding: 0.375rem 0.75rem!important;
+}
+.study-meterial-heading-main+.studymat-layout-wrapper .uploadfile-box.input-group {
+    max-width: 80%!important;
+}
+span.editDelBtn a.btn.editBtn {
+    padding: 0px!important;
+}
+.multiQuestionList ul li .editDelBtn .btn:focus,
+.multiSampleAns ul li span.editDelBtn .btn:focus {
+    box-shadow: none;
+}
+
+.multiQuestionList ul li:last-child {
+    margin-bottom: 0;
+}
+#edit_practice .courseNameInner {
+    padding-bottom: 18px;
+}
+#edit_practice .courseNameInner hr {
+    border-bottom: 2px solid rgba(189, 189, 189, 0.6);
+    border-top: none;
+    margin-top: 35px;
+}
+
+.courseBtnRight .whiteColor {
+    color: #fff;
+}
+
+.practiceQuestionHead .questionHeading,
+.practiceQuestionHead .questionTextRight {
+    width: 40%;
+}
+
+.questionHeading p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
+}
+
+.multiSampleAns ul {
+    padding: 0;
+    margin: 0;
+}
+
+.multiSampleAns ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.multiSampleAns ul li span.sampleAnsText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #B80D48;
+}
+
+.multiSampleAns ul li span.sampleAnsText b {
+    display: block;
+}
+
+.newStudyMatInner .newStudyMatForm .courseTimeLimit select.form-control {
+    background: rgba(43, 106, 108, 0.2);
+    border: 1px solid #95c4c5;
+}
+
+.newStudyMatInner .newStudyMatForm .courseSelectBox:after {
+    background: #e1eaeb;
+    color: #808fa3;
+    border-left: 1px solid #95c4c5;
+}
+
+.newStudyMatInner .newStudyMatForm input.form-control {
+    border: 1px solid #95c4c5;
+}
+
+.newStudyMatInner .newStudyMatForm {
+    box-shadow: 1px 4px 10px rgb(0 82 180 / 25%);
+}
+
+.newStudyMatInner .newStudyMatForm .courseRightField div#cke_editor {
+    border: 1px solid #95c4c5;
+}
+
+.newStudyMatInner .newStudyMatForm .courseRightField div#cke_editor span#cke_1_top {
+    border-bottom: 1px solid #95c4c5;
+}
+
+.styudyUploadSec .studyUpload label {
+    background-color: #fff;
+    color: #2B6A6C;
+    padding: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
+
+.styudyUploadSec .studyUpload {
+    border: 2px dashed #2B6A6C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.styudyUploadSec .studyUpload label span.uploadImg {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.courseNameField .form-group label.switch {
+    width: 30px;
+    height: 15px;
+    padding: 0;
+    min-width: 30px;
+}
+
+.newStudyMatForm .courseTimeLimit .matOnOff {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 150px;
+}
+
+.matOnOff span.hideTitle h3 {
+    font-size: 14px;
+    color: #323C47;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.newStudyMatForm .form-group label.switch .slider:before {
+    left: -5px;
+    height: 20px;
+    width: 20px;
+    bottom: -2px;
+    background: #9a9c9f;
+}
+
+.newStudyMatForm .form-group label.switch input:checked+.slider:before {
+    background: #2b6a6c;
+    transform: translateX(20px);
+}
+
+.matOnOff .siteOnOffBtn .slider.round {
+    background: #dedede;
+}
+
+.styudyUploadReplace .uploadReplace {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 0.5px solid #cfcfd0;
+    border-radius: 6px;
+    align-items: center;
+    height: min-content;
+}
+
+.styudyUploadReplace .uploadReplace p {
+    margin: 0;
+}
+
+.uploadReplace .uploadBtn label {
+    width: auto;
+    min-width: auto;
+    font-size: 12px;
+    color: #2B6A6C;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.styudyUploadReplace .uploadReplace p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #262D37;
+    padding-left: 15px;
+}
+
+.styudyUploadReplace .form-group {
+    align-items: center;
+}
+
+
+/*==== Loader Css ====*/
+
+#loader {
+    position: fixed;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(234, 234, 234, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+#loader img {
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+
+/*==== Loader Css ====*/
+
+
+
+.practiAnsQues.practiAnsBlank {
+    margin-bottom: 0px;
+    border: 0px;
+}
+
+.ImgIcon {
+    cursor: pointer;
+}
+
+
+/*==== Start Other Structure CSS =====*/
+
+.c-wrapper header.c-header {
+    border-bottom: 0;
+}
+
+
+/*==== End Other Structure CSS =====*/
+
+
+/* 8-2-2021 */
+
+.landingPageCourse .addCourseRow .addCourseBtn {
+    background: #4DA1FF;
+    border-radius: 4px;
+    padding: 15px;
+    max-width: 226px;
+    width: 100%;
+    color: #ffffff;
+    height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    line-height: 30px;
+}
+
+.addCourseBtn:hover {
+    color: #ffffff;
+}
+
+.courseDetailPage+.modal .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%)!important;
+}
+
+#alertConfirmed .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%)!important;
+}
+
+#alertConfirmed .modal-dialog .modal-body {
+    padding: 0;
+}
+
+#alertConfirmed .modal-dialog .confirmNameHead {
+    background: #DEDEDE;
+    padding: 22px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#alertConfirmed .modal-content {
+    border-radius: 8px;
+}
+
+#alertConfirmed .modal-dialog .confirmNameHead h3.deleteHeading {
+    color: #444444;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#alertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #4DA1FF;
+    color: #fff;
+}
+
+#alertConfirmed .deletepopcontent {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#alertConfirmed .deletepopcontent h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+#alertConfirmed .deletepopcontent .deleteP {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+#alertConfirmed .modal-dialog .modal-content .modal-footer {
+    text-align: center;
+    padding: 25px 0;
+}
+
+#alertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn {
+    margin: 0;
+    width: 100%;
+}
+
+#alertConfirmed .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary {
+    min-width: 235px;
+    border: 1px solid #4DA1FF;
+    border-radius: 4px;
+    background: #fff;
+    color: #4DA1FF;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 0;
+}
+
+.deletrFooterButton {
+    width: 100%;
+    text-align: center;
+}
+
+.deletrFooterButton .dont-delete {
+    background: #4DA1FF;
+    border: 1px solid #4DA1FF;
+}
+
+.deletrFooterButton .btn {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 40px;
+    min-width: 240px;
+    border-radius: 4px;
+}
+
+.deletrFooterButton .yesdelete {
+    background: #FD2A2A;
+    border: 1px solid #FD2A2A;
+    margin-left: 15px;
+}
+
+
+/* study matieral css start */
+
+.studyInnerContent .noContentBox h4 {
+    color: #BDBDBD;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24.2119px;
+        line-height: 136.4%;
+    letter-spacing: 0.05em;
+}
+
+.study-meterial-heading-main {
+    background: #2B6A6C;
+    padding:17px 20px;
+}
+
+.study-meterial-heading-main .dashboard-h-study h3 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.study-mat-cancombtn {
+    text-align: right;
+}
+
+.study-mat-cancombtn .btn {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.study-mat-cancombtn .btn.cancle {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.studymat-layout-wrapper {
+    padding: 20px 25px;
+    margin-top: 30px;
+}
+
+.studymat-layout-wrapper .portlet {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 1px 4px 10px rgba(0, 82, 180, 0.25);
+    padding: 50px 100px;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body label {
+    max-width: 180px;
+    width: 100%;
+    color: #323C47;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    display: block;
+    min-width: 180px;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body label span {
+    color: #959595;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .form-group {
+    flex-flow: inherit;
+/*    flex-wrap: wrap;*/
+    align-items: flex-start;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .input-group {
+    width: 80%;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .input-group textarea {
+    min-height: 150px;
+    background: #FFFFFF;
+    border: 0.5px solid #2B6A6C;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #323C47;
+    font-size: 14px;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .input-group select {
+    border: 0.5px solid #2B6A6C;
+    border-radius: 4px;
+    height: 45px!important;
+    background: url('../img/select-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    color: #323C47;
+    font-size: 14px;
+    width: 100%;
+}
+.studymat-layout-wrapper .portlet .portlet-body label#material_type-error {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+    margin-top: 0px;
+        position: absolute;
+    bottom: -27px;
+}
+.studymat-layout-wrapper .portlet .portlet-body .matsel-group .input-group {
+    background: rgba(43, 106, 108, 0.2);
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .input-group input {
+    background: #FFFFFF;
+    border: 0.5px solid #2B6A6C;
+    border-radius: 4px;
+    height: 45px!important;
+    margin-bottom: 20px;
+    color: #323C47;
+    font-size: 14px;
+    width: 100% ;
+}
+.studymat-layout-wrapper .portlet .portlet-body label#material_title-error{
+      width: 100%;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+    margin-top: 0px;
+}
+.studymat-layout-wrapper .portlet .portlet-body .matsel-group {
+    border-bottom: 1px solid rgba(189, 189, 189, 0.5);
+    padding-bottom: 40px;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .input-group input:focus,
+.studymat-layout-wrapper .portlet .portlet-body .input-group textarea:focus,
+.studymat-layout-wrapper .portlet .portlet-body .input-group select:focus {
+    box-shadow: none!important;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .uploadfile-box {
+    /*display: block;*/
+    position: relative;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px 20px 15px 20px;
+   width:100%;
+    margin: 0;
+    text-align: center;
+    border: 2px dashed #707070;
+    max-width: 100%;
+}
+.study-meterial-heading-main.edit-stm + .studymat-layout-wrapper hr {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.studymat-layout-wrapper .portlet .portlet-body .upload-options {
+    position: relative;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .uploadfile-box img {
+    max-width: 100%;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .uploadfile-box .input-upload {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    margin: 0px;
+    display: block;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .uploadfile-box h3 {
+    font-size: 13px;
+    color: #2B6A6C;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .uploadfile-box h3 b {
+    font-weight: bold;
+}
+
+.studymat-layout-wrapper .portlet .portlet-body .upload-options input {
+    width: 100%!important;
+    height: 100%!important;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+div#insertConfirmed .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#insertConfirmed .modal-dialog .courseNameHead {
+    padding: 14px 0;
+    background: #2B6A6C;
+}
+
+.studyInnerContent a.viewDetailBtn {
+    border: 1px solid #2B6A6C;
+    border-radius: 4px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 136.4%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #2B6A6C;
+    padding: 10px 17px;
+    min-width: 136px;
+    display: block;
+}
+div#practiceExams .practiceInnerContent a.viewDetailBtn {
+    border: 1px solid #B80D48;
+    border-radius: 4px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 136.4%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #B80D48;
+    padding: 10px 8px;
+}
+.tutorialTable table.table thead th+th+th+th {
+    text-align: center;
+}
+
+.deletesutdymaterial .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%)!important;
+}
+
+.deletesutdymaterial .modal-body {
+    padding: 0;
+}
+
+.deletesutdymaterial .modal-body .deletePopContent {
+    text-align: center;
+    padding: 56px 0;
+}
+
+.deletesutdymaterial .deletePopContent h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.deletesutdymaterial .deletePopContent h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.deletesutdymaterial .deletePopContent p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+    width: 250px;
+    display: inline-block;
+}
+
+.deletesutdymaterial .delCourseHeadPop {
+    background: #DEDEDE;
+    padding: 19px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.deletesutdymaterial h3.deleteHeading {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #444444;
+}
+
+.deletesutdymaterial .deletrFooterButton .deleteconfirmed{
+    min-width: 235px;
+    border: 1px solid #4DA1FF;
+    border-radius: 4px;
+    background: #fff;
+    color: #4DA1FF;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 0;
+}
+.deletesutdymaterial .deletrFooterButton .deleteconfirmed:active {
+    padding: 14px 0!important;
+      background: #4DA1FF;
+       border: 1px solid #4DA1FF!important;
+    color: #fff!important;
+}
+.deletesutdymaterial .deletrFooterButton .deleteconfirmed:hover {
+    background: #4DA1FF;
+    color: #fff;
+}
+
+.btn:active {
+    box-shadow: none!important;
+}
+
+.dashboard-h-study.edit-dsh {
+    display: inline-flex;
+    align-items: center;
+    line-height: 33px;
+}
+
+.dashboard-h-study.edit-dsh .siteOnOffBtn label.switch {
+    max-width: 34px!important;
+}
+
+.dashboard-h-study.edit-dsh .siteOnOffBtn .slider:before {
+    height: 20px;
+    width: 20px;
+    bottom: -3px;
+}
+
+.dashboard-h-study.edit-dsh .siteOnOffBtn .switch {
+    height: 14px;
+}
+
+.study-meterial-heading-main.edit-stm {
+    padding: 17px 20px;
+}
+
+.dashboard-h-study.edit-dsh .siteOnOffBtn {
+    margin-left: 35px;
+    position: relative;
+    top: 2px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dashboard-h-study.edit-dsh .siteOnOffBtn span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.study-mat-cancombtn.edit-csv-btn .btn,
+.study-mat-cancombtn.edit-csv-btn .btn:hover,
+.study-mat-cancombtn.edit-csv-btn .btn:focus,
+.study-mat-cancombtn.edit-csv-btn .btn:active {
+    background: transparent;
+}
+
+.study-mat-cancombtn.edit-csv-btn .btn.btn-primary,
+.study-mat-cancombtn.edit-csv-btn .btn-primary:not(:disabled):not(.disabled):active {
+    background: transparent;
+    color: #fff!important;
+}
+
+.edit-filenme {
+    width: 100%;
+    position: relative;
+}
+
+.edit-filenme input {
+    width: 100%!important;
+    margin-bottom: 0px!important;
+}
+
+.edit-filenme span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    padding-right: 15px;
+}
+
+.edit-filenme span a {
+    color: #2B6A6C;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.form-group.form-inline.edit-file-input {
+    margin-top: 35px;
+    align-items: center!important;
+}
+
+.portlet.box.edit-dash-layout .matsel-group .input-group {
+    width: 65%;
+}
+
+.portlet.box.edit-dash-layout .matsel-group .input-group .siteOnOffBtn {
+    margin-left: 35px;
+    position: relative;
+    top: 2px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.portlet.box.edit-dash-layout .matsel-group .input-group .siteOnOffBtn span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.material-onoffbtn {
+    width: 120px;
+    margin-left: 25px;
+}
+
+.material-onoffbtn .siteOnOffBtn {
+    display: flex;
+    align-items: center;
+}
+
+.material-onoffbtn .siteOnOffBtn span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #323C47;
+    text-transform: uppercase;
+}
+
+.material-onoffbtn .siteOnOffBtn label.switch {
+    max-width: 34px!important;
+    margin-left: 18px;
+    min-width: 34px!important;
+}
+
+.material-onoffbtn .siteOnOffBtn .slider {
+    background: #BDBDBD;
+}
+
+.material-onoffbtn .siteOnOffBtn .slider:before {
+    background: #9A9C9F;
+    height: 20px;
+    width: 20px;
+    bottom: -3px;
+}
+
+.material-onoffbtn .siteOnOffBtn .switch {
+    height: 14px;
+}
+
+.material-onoffbtn .siteOnOffBtn input:checked+.slider:before {
+    background: #2B6A6C;
+}
+
+.material-onoffbtn .siteOnOffBtn input:checked+.slider {
+    background-color: #6a88a0;
+}
+
+.study-mat-cancombtn.edit-csv-btn .cancle-btn {
+    font-weight: 400;
+    padding-top: 7px;
+}
+.dashboard-h-study.edit-dsh .siteOnOffBtn span.hide-btn {
+    position: relative;
+    top: 2px;
+}
+.dashboard-h-study.edit-dsh h3 {
+    padding-top: 3px;
+}
+.study-mat-cancombtn.edit-csv-btn .save-btn.btn {
+    padding-top: 7px;
+}
+.courseNameSec.editpr-ex #edit_practice .courseBtnRight {
+    padding-top: 4px;
+}
+.edit_tutorial_layout #add_tutorial .courseBtnRight {
+    padding-top: 5px;
+}
+div#practiceExams .tutorialTable table.table tr th:first-of-type,
+div#practiceExams .tutorialTable table.table tr td:first-of-type{
+    text-align: left!important;
+}
+div#practiceExams .tutorialTable table.table tr td,
+div#practiceExams .tutorialTable table.table tr th{
+    text-align: center;
+}
+div#practiceExams .tutorialTable table.table tr td{
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+color: #000000;
+    font-family: 'Quicksand', sans-serif;
+}
+div#practiceExams .tutorialTable table.table tr td:first-of-type h4{
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+color: #000000;
+margin-bottom: 7px;
+}
+div#practiceExams .tutorialTable table.table tr td:first-of-type{
+    font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+}
+div#practiceExams .tutorialTable {
+    padding-right: 10px;
+}
+div#practiceExams .tutorialTable table.table thead th{
+    font-weight: 800;
+}
+div#practiceExams .tutorialTable::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    background-color: #F5F5F5;
+}
+
+div#practiceExams .tutorialTable::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+div#practiceExams .tutorialTable::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#b80d48;
+}
+.viewDetailPage.practiceExamviewdetail .studyDetailBar{
+    background: #B80D48;
+}
+.practiceExamviewdetail .studyBtn.studyDelBtn {
+    border-color: #ffffff;
+}
+.practiceExamviewdetail .studyBarBtn a.studyBtn.studyEditBtn{
+        color: #b80d48;
+}
+.practiceExamviewdetail .studyDetailBar span.backBtnTutorial a {
+    color: #d4d4d4;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatInner table.table th:nth-child(2){
+    width: auto!important;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatInner table.table tr td{
+    font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 16px;
+color: #323C47;
+padding-top: 7px;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatInner table.table tr td a{
+    font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 13px;
+letter-spacing: 0.03em;
+color: #4DA1FF;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatInner table.table tr td:last-child{
+    padding-left: 0px;  
+    text-align: left;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatInner table.table tbody{
+    padding-top: 5px;
+}
+.viewDetailPage.practiceExamviewdetail .studyMatTable h2{
+    color: #B80D48;
+}
+.formatUpload span{display:none;}
+/*.courseNameInner.practiceExamSec {
+    padding-bottom: 0px;
+}*/
+ul#sortable {
+    padding: 0px;
+}
+.practiceQuestionHead .questionHeading {
+    text-align: left;
+}
+.practiceQuestionList .multiQuestionList span.editDelBtn {
+    position: absolute;
+    right: 0;
+    bottom:-25px;
+}
+.practiceQuestionList .multiSampleAns span.editDelBtn {
+    position: absolute;
+    right: 0;
+    bottom:-5px;
+}
+.practiceQuestionList .multiSampleAns{
+    position: relative;
+}
+.practiceQuestionList .multiQuestionList {
+    position: relative;
+}
+
+.practiceQuestionList ul li .fa {
+    display: none;
+}
+.practiceQuestionList ul li.active .fa {
+    display: block!important;
+}
+.practiceQuestionList .multiSampleAns ul li span.sampleAnsText {
+    text-align: left;
+    max-width: 75%;
+    width: 100%;
+}
+
+.addNewOption .optionCheck1 span.optionCircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+   background: #FFFFFF;
+border: 2px solid rgba(189, 189, 189, 0.3);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.addNewOption .optionCheck1 h3{
+    font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.05em;
+color: #BDBDBD;
+cursor: pointer;
+}
+.addNewOption .optionCheck1 {
+    display: flex;
+    cursor: pointer;
+}
+
+
+.examinsertconfirmed .exampp-heading {
+    background: #B80D48;
+    padding: 19px 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.examinsertconfirmed .exampp-heading h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+.examinsertconfirmed .examinsertpp{
+text-align: center;
+    padding: 56px 0;
+}
+.examinsertconfirmed .examinsertpp h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 10px;
+}
+.examinsertconfirmed .examinsertpp h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 30px;
+}
+.examinsertconfirmed .bpc-btn{
+    width: 100%;
+    text-align: center;
+}
+.examinsertconfirmed .bpc-btn .btpe-btn,.examinsertconfirmed .bpc-btn .btpe-btn:hover,
+.examinsertconfirmed .bpc-btn .btpe-btn:focus,.examinsertconfirmed .bpc-btn .btpe-btn:active {
+    min-width: 235px;
+    border: 1px solid #B80D48!important;
+    border-radius: 4px;
+    background: #fff!important;
+    color: #B80D48!important;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 0px!important;
+}
+.examinsertconfirmed .modal-content {
+    border-radius: 9px!important;
+}
+ul#sortable li {
+    list-style: none;
+}
+.newPracticeAdBtn+span.ddqr-title {
+    position: relative;
+    top: 32px;
+    margin-left: 15px;
+    font-style: italic;
+font-weight: 300;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.05em;
+color: #000000;
+display: block;
+margin-bottom: 30px;
+}
+
+.editpr-ex .courseNameField .courseTimeLimit {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.tutorialTabbBox a.tutorialAddBtn{
+    border-radius: 4px;
+    padding-left: 42px;
+    padding-right:42px;
+}
+
+
+.tutorial-dashboard-layout a.viewDetailBtn {
+    border: 1px solid #f4ac6c;
+    border-radius: 4px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 136.4%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #f4ac6c;
+    padding: 8px 17px;
+}
+.tutorial-dashboard-layout table.table tr th:first-of-type,
+.tutorial-dashboard-layout table.table tr td:first-of-type{
+    width: 60%;
+    text-align: left;
+}
+.tutorial-dashboard-layout table.table tr th{
+    text-align: center;
+    font-style: normal;
+font-weight: 800;
+font-size: 10px;
+line-height: 12px;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+
+color: #BDBDBD;
+}
+.tutorial-dashboard-layout table.table tr{
+    padding:6px 0px!important;
+}
+.tutorial-dashboard-layout table.table tr td{
+    text-align: center;
+    font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.05em;
+text-transform: capitalize;
+color: #000000;
+}
+
+.uploadedFile {
+    clear: both;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#cke_editor{width: 100% !important;}
+
+.tutorial-view-layout .studyDetailBar{
+    background: #F4AC6C;
+}
+.tutorial-view-layout .studyBarBtn .deletbtn {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.tutorial-view-layout .studyBarBtn .editdtn{
+color:#F4AC6C;
+}
+.uploadfile{display : none;}
+
+
+.tutorial-view-layout .studyDetailBar span.backBtnTutorial a {
+    color: rgba(255,255,255,0.5);
+}
+.viewDetailPage.tutorial-view-layout .courseDetailInner {
+    padding-top: 30px;
+}
+.viewDetailPage.tutorial-view-layout .courseDetailInner .studyMatName h2{
+    margin-bottom: 20px;
+}
+.viewDetailPage.tutorial-view-layout .courseDetailInner .tutor-name h3,
+.viewDetailPage.tutorial-view-layout .courseDetailInner .studyMatContent h3 {
+    margin-bottom: 5px;
+}
+.viewDetailPage.tutorial-view-layout .courseDetailInner .classMaterialsbox {
+    padding: 0px;
+    margin-top: 20px;
+}
+.viewDetailPage.tutorial-view-layout .courseDetailInner .classMaterialsbox label{
+font-size: 12px;
+font-weight: 700;
+color: #BDBDBD;
+margin-bottom: 0px;
+text-transform: uppercase;
+}
+.tutorial-view-layout .studyBarLeft .siteOnOffBtn .slider {
+    background: #dcdbdb;
+}
+.tutorial-view-layout .studyBarLeft .siteOnOffBtn input:checked+.slider {
+    background: #d7d8d8;
+}
+.tutorial-view-layout .studyMatTable h2 {
+    font-style: normal;
+font-weight: 800;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #F29724;
+}
+
+.tutorialTable table.table tbody tr td+td+td {
+    color: #262D37!important;
+    font-size: 12px;
+    font-weight:500;
+    display: flex;
+    word-break: break-all;
+    align-items: baseline;
+}
+.tutorialTable table.table tbody tr td+td+td .fa {
+    padding-top: 0;
+    padding-right: 7px;
+    position: relative;
+    top: 1px;
+}
+.edit-filenme {
+    margin: 7px 0px;
+}
+.portlet.box.edit-dash-layout.blue .form-body {
+    text-align: right;
+}
+.studymat-layout-wrapper .portlet .portlet-body label{
+    text-align: left;
+}
+.inputFPractice .ImgIcon {
+    background: #ffffff!important;
+    border-left: 1px solid #dca7b9!important;
+}
+.addAudioRecord .examOptionRow label {
+    position: relative;
+    cursor: pointer;
+}
+.addAudioRecord .examOptionRow label:after {
+   content:'\F01B';
+   font-family: 'FontAwesome';
+    position: absolute;
+    top: -5px;
+    width: 25px;
+    height: 25px;
+    right: -32px;
+    font-size: 20px;
+    color: #b80d48;
+}
+/*.addAudioRecord .uploadAnswerWrite {
+    display: flex;
+    align-items: center;
+}*/
+.addAudioRecord .uploadAnswerWrite p {
+    margin-bottom: 0px;
+    margin-right: 10px;
+    float: left;
+    color:#3c4b64;
+}
+.addAudioRecord .examOptionRow{
+    margin-bottom: 0px;
+}
+
+
+
+.tutorialTable.tutorial-dashboard-layout table.table tbody tr td+td+td{
+    justify-content: center;
+}
+.tutorial-view-layout .studyBarBtn a.studyBtn.studyEditBtn{
+        color: #f4ac6c;
+}
+.edit_tutorial_layout .courseNameRow.portlet-title{
+    background: #F39734;
+}
+.edit_tutorial_layout .courseBtnRight .whitecolor{
+    color: #ffffff;
+}
+.edit_tutorial_layout .courseNameInner .courseNameField{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.classMaterial-editlayout .form-group {
+    display: block;
+    width: 100%;
+}
+.edit-tutonofbtn .form-group {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.edit_tutorial_layout .form-body .form-group {
+    display: block;
+}
+.edit_tutorial_layout .form-body .form-group label{
+    font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #323C47;
+}
+.edit_tutorial_layout .form-body .form-group textarea{
+    min-height: 180px;
+}
+.edit-tutonofbtn .material-onoffbtn{
+    margin-left: 0px;
+}
+.edit-tutonofbtn .material-onoffbtn .siteOnOffBtn {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.edit-tutonofbtn .material-onoffbtn .siteOnOffBtn>span:first-of-type{
+    padding:0px 0px 12px;
+}
+.edit-tutonofbtn .material-onoffbtn .siteOnOffBtn label.switch{
+    margin-left: 5px;
+}
+.classMaterial-editlayout .materialLoop {
+    max-width: 60%;
+    width: 100%;
+    background: #FFFFFF;
+opacity: 0.8;
+border: 0.5px solid #5C6269;
+border-radius: 6px;
+}
+.edit_tutorial_layout .form-body input,
+.edit_tutorial_layout .form-body textarea{
+    background: #FFFFFF;
+border: 0.5px solid #F4AC6C;
+border-radius: 4px;
+}
+.edit-tutonofbtn .material-onoffbtn .siteOnOffBtn input:checked+.slider:before{
+    background: #F39734;
+}
+.edit-tutonofbtn .material-onoffbtn .siteOnOffBtn input:checked+.slider{
+background:rgba(244, 172, 108,0.5);
+}
+.edit_tutorial_layout .classMaterial-editlayout h3{
+    font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #323C47;
+margin-bottom: 15px;
+}
+.edit_tutorial_layout hr {
+    margin: 30px 0px;
+}
+.classMaterial-editlayout .materialLoop i.fa {
+    font-size: 21px;
+}
+.edit_tutorial_layout+style+script+script+.modal.examinsertconfirm .modal-dialog .courseNameHead{
+  background: #F39734!important;
+}
+.edit_tutorial_layout+style+script+script+.modal.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary{
+  border:1px solid #F39734!important;
+    color:#F39734!important;
+}
+.edit_tutorial_layout+style+script+script+.modal.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #F39734!important;
+    color: #fff!important;
+}
+#edit_tutorial+script+script+script+script+div+.modal.examinsertconfirm .modal-dialog .courseNameHead{
+  background: #F39734!important;
+}
+#edit_tutorial+script+script+script+script+div+.modal.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary{
+  border:1px solid #F39734!important;
+    color:#F39734!important;
+}
+#edit_tutorial+script+script+script+script+div+.modal.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #F39734!important;
+    color: #fff!important;
+}
+input:focus,
+textarea:focus{
+    box-shadow: none!important;
+}
+.viewDetailPage.tutorial-view-layout .tableScroll {
+    scrollbar-width: thin;
+    scrollbar-color: #F4AC6C transparent;
+}
+.classMaterial-editlayout .tsc-button .tcm-btn{
+    background: #F4AC6C;
+    border: 0.5px solid #F4AC6C;
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 136.4%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    width: 196px;
+    height: 36px;
+    display: block;
+    margin-bottom: 15px;
+}
+.classMaterial-editlayout .tsc-button{
+    margin-bottom: 15px;
+}
+.classMaterial-editlayout .tsc-button label{
+    display: block;
+    font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+margin-bottom: 11px;
+    margin-top: 22px;
+color: #323C47;
+}
+
+.addtutorialpopup .questionModelPopInner .questionModelHead{
+    background: #F4AC6C;
+}
+.addtutorialpopup .questionModelPopInner .fileUploadBtn .done,
+.addtutorialpopup .questionModelPopInner .fileUploadBtn .done:hover,
+.addtutorialpopup .questionModelPopInner .fileUploadBtn .done:active{
+    background: #F4AC6C!important;
+        color: #ffffff!important;
+        border:1px solid #F4AC6C!important;
+        padding-top: 11px!important;
+        padding-bottom: 11px!important;
+}
+.materialTrash {
+    padding-left: 15px;
+}
+.addtutorialpopup .questionModelPopInner .fileUploadBtn .cancle,
+.addtutorialpopup .questionModelPopInner .fileUploadBtn .cancle:active{
+    color:#F4AC6C!important;
+    border-color: #F4AC6C!important; 
+}
+.addtutorialpopup .questionModelBody .fileUploadRow .uploadBtn label{
+    color:#F4AC6C;
+    border: 1px solid #F4AC6C;
+    font-size: 13px;
+    width: 160px;
+}
+.addtutorialpopup .QuestionMedia .questionURL .videourl {
+    width: 100%;
+}
+.addtutorialpopup .QuestionMedia .questionURL .videourl input{
+   border: 1px solid #F4AC6C;
+}
+.addtutorialpopup .questionURL .form-group:first-of-type{
+    margin-bottom: 20px;
+}
+.addtutorialpopup .questionModelBody label span{
+    font-style: normal;
+font-weight: 600;
+font-size: 9px;
+line-height: 136.4%;
+text-transform: uppercase;
+color: #959595;
+display: block;
+}
+.addtutorialpopup .questionURL .form-group label{
+    display: block;
+}
+.tutorialTable table.table tbody tr td+td+td+td{
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000!important;
+}
+div#studyMaterials .tutorialTable {
+    padding-right: 10px;
+}
+div#studyMaterials .tutorialTable::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+div#studyMaterials .tutorialTable::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+div#studyMaterials .tutorialTable::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #2b6a6c;
+}
+div#studyMaterials .tutorialTable table.table tbody tr td+td {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+div#studyMaterials .tutorialTable table.table thead th+th {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.tutorialTable table.table tbody tr td+td+td .fa{
+    color:#dadada;
+}
+
+a.replaceMaterial.float-right{
+    color:#2B6A6C;
+    font-weight: 700;
+    font-size: 12px;
+}
+.addAudioRecord .uploadAnswerWrite {
+    width: calc(100% - 70px);
+    border: 1px solid #dca7b9;
+    opacity: 0.8;
+    align-items: center;
+    height:34px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 4px;
+    max-width: 280px;
+    position: relative;
+}
+.addAudioRecord .uploadAnswerWrite button.uploadDel img {
+    max-width: 15px;
+    position: relative;
+    top: -1px;
+}
+.addAudioRecord .uploadAnswerWrite button.uploadDel {
+    border-radius: 50%;
+    border:none;
+    background: transparent;
+        position: absolute;
+    right: 6px;
+    top: 6px;
+}
+.addtutorialpopup .QuestionMedia .questionURL .videourl{
+    position: relative;
+}
+.addtutorialpopup .QuestionMedia .questionURL .videourl .doneUrlMaterial,
+.addtutorialpopup .QuestionMedia .questionURL .videourl .doneUrlAssignment {
+    position: absolute;
+    right: 5px;
+    background: transparent;
+    color: #f4ac6c;
+    border: none;
+    top: 0px;
+}
+.addtutorialpopup .questionURL .uploadMaterialName,
+.addtutorialpopup .questionURL .uploadAssignmentName {
+    width: calc(100% - 140px);
+    float: right;
+    margin-top: 15px;
+}
+.addtutorialpopup .questionURL .uploadMaterialName .uploadedFile{
+    border-radius: 6px;
+}
+.addtutorialpopup .questionModelPopInner .fileUploadBtn{
+    padding: 25px 0;
+}
+.addtutorialpopup .questionURL .form-group label{
+    position: relative;
+}
+.addtutorialpopup .questionURL .form-group:first-child label:after{
+    content: 'OR';
+      position: absolute;
+    top: 30px;
+    left: 0px;
+    font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #B5B5B5;
+}
+.addtutorialpopup .questionURL .form-group .fileUploadRow .uploadVideo{
+    padding: 10px;
+}
+.addtutorialpopup .questionURL .form-group .videourl input#tutorial_material_url {
+    padding-right: 60px;
+}
+.addtutorialpopup .questionURL .form-group .videourl input#assignment_url {
+    padding-right: 60px;
+}
+.addtutorialpopup .questionURL .StudyMaterial,
+.addtutorialpopup .questionURL .loopAssignmentPopup{
+     width: calc(100% - 140px);
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.addtutorialpopup .questionURL .StudyMaterial .materialLoop,
+.addtutorialpopup .questionURL .loopAssignmentPopup .assignmentLoop {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 70px);
+    border: 1px solid #bbbbbb;
+ /*   opacity: 0.8;*/
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.addtutorialpopup .questionURL .StudyMaterial .materialLoop .fa,
+.addtutorialpopup .questionURL .StudyMaterial .loopAssignment .fa  {
+    font-size: 23px;
+}
+.questionURL img{
+    cursor: pointer;
+}
+.addtutorialpopup .questionURL .loopAssignment{
+     display: flex;
+    justify-content: space-between;
+    width: calc(100% - 70px);
+    border: 1px solid #bbbbbb;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 15px;  
+}
+.addtutorialpopup .questionURL .form-group{
+    width: 100%;
+}
+
+.edit_tutorial_layout+.tutorialinsertconfirm .modal-dialog .courseNameHead{
+        background: #F39734!important;
+}
+
+.edit_tutorial_layout+.tutorialinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary{
+    border-color:#F39734!important;
+    color:#F39734!important; 
+}
+.edit_tutorial_layout+.tutorialinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #F39734!important;
+    color: #fff!important;
+}
+.courseDetailPage+.examinsertconfirm .modal-dialog .courseNameHead{
+    background: #4da1ff!important;
+}
+.courseDetailPage+.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary{
+    border-color:#4da1ff!important;
+    color:#4da1ff!important; 
+}
+.courseDetailPage+.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #4da1ff!important;
+    color: #fff!important;
+}
+.editCourseDetail+.courseDetailInner .edit_courselavel .radioBoxSec label {
+    color: #808080;
+}
+.editCourseDetail+.courseDetailInner .edit_courselavel .checkcontainer input:checked~.radiobtn {
+    background-color: #808080;
+    border-color: #808080;
+}
+.editCourseDetail+.courseDetailInner .edit_courselavel .checkcontainer .radiobtn{
+    border-color: #808080;
+}
+.portlet.box.blue.edit_tutorial_layout .form-group .input-group .error+label {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+}
+#edit_tutorial+script+script+script+script+.examinsertconfirm .modal-dialog .courseNameHead{
+        background: #F39734!important;
+}
+
+#edit_tutorial+script+script+script+script+.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary{
+    border-color:#F39734!important;
+    color:#F39734!important; 
+}
+#edit_tutorial+script+script+script+script+.examinsertconfirm .modal-dialog .modal-content .modal-footer .modelFooterBtn a.btn-primary:hover {
+    background: #F39734!important;
+    color: #fff!important;
+}
+.classMaterial-list ul {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.classMaterial-list ul li {
+        list-style: none;
+    padding: 8px 0px 5px 15px;
+    outline: none;
+}
+.classMaterial-list ul li a{
+    background: #FFFFFF;
+opacity: 0.8;
+border: 0.5px solid #F29724;
+border-radius: 6px;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 136.4%;
+letter-spacing: 0.05em;
+color: #262D37;
+    padding: 12px 15px 12px 10px;
+    text-align: left;
+    display: block;
+    outline: none;
+}
+.classMaterialsbox{
+    padding:0px;
+    margin: 0px;
+}
+
+
+.tutorialInnerContent.tutorialTabbBox .tutorial-dashboard-layout::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    background-color: #F5F5F5;
+}
+
+.tutorialInnerContent.tutorialTabbBox .tutorial-dashboard-layout::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+.tutorialInnerContent.tutorialTabbBox .tutorial-dashboard-layout::-webkit-scrollbar-thumb
+{
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:#f4ac6c;
+}
+.classMaterial-list {
+    display: inline-block;
+    width: 100%;
+}
+.tutor-name {
+    margin-bottom: 25px;
+}
+
+.tutor-name h3 {
+    margin-bottom: 10px;
+}
+form#edit_practice .material-onoffbtn .siteOnOffBtn input:checked+.slider:before {
+    background: #b80d48!important;
+}
+form#edit_practice .material-onoffbtn .siteOnOffBtn input:checked+.slider {
+    background-color: #cb99aa!important;
+}
+.tutorial-dashboard-layout{
+     scrollbar-width: thin;
+    /* "auto" or "thin"  */
+    scrollbar-color: #f4ac6c transparent;
+}
+div#practiceExams .tutorialTable table.table tr td+td+td{
+    text-align: center;
+    justify-content: center;
+}
+
+.addtutorialpopup .QuestionMedia .questionURL .videourl input+label{
+      font-size: 12px;
+    color: #ec4b4b;
+    font-weight: 500;
+        width: 100%;
+    text-align:left;
+    padding-top: 10px;
+}
+.addtutorialpopup .QuestionMedia .questionURL .videourl input+label:after{
+    content:''!important;
+}
+.classMaterial-editlayout .tsc-button .materialTutorialUrl .material_edit_url,
+.classMaterial-editlayout .tsc-button .videoTutorialUrl .material_edit_url{
+        display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid #bbbbbb;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 8px;
+
+ margin-bottom: 7px;
+margin-top: 7px;
+min-width: 300px;
+}
+.classMaterial-editlayout .tsc-button .materialTutorialUrl a,
+.classMaterial-editlayout .tsc-button .videoTutorialUrl a{
+    color: #262D37;
+    font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 136.4%;
+letter-spacing: 0.05em;
+}
+.classMaterial-editlayout .tsc-button .materialTutorialUrl .editMaterialDel,
+.classMaterial-editlayout .tsc-button .videoTutorialUrl .editVideoDel {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+.classMaterial-editlayout .tsc-button .screenStudyMaterial .materialLoop,
+.classMaterial-editlayout .screenAssignmentPopup .assignmentLoop{
+width: 100%;
+display: inline-block;
+border: none; 
+opacity: 1;  
+}
+.addtutorialpopup .questionURL .StudyMaterial .materialLoop div, .addtutorialpopup .questionURL .loopAssignmentPopup .assignmentLoop div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        word-break: break-all;
+}
+.classMaterial-editlayout .tsc-button .uploadTutorialVideo,
+.classMaterial-editlayout .tsc-button .screenStudyMaterial .materialLoop .study-mvideo {
+    display: inline-flex;
+    border: 1px solid #bbbbbb;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    color: #3c4b64;
+    padding: 7px 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+        opacity: 1;
+            max-width: 100%;
+        width: auto;
+}
+.classMaterial-editlayout .tsc-button .uploadTutorialVideo p{
+    margin-bottom: 0px;
+}
+
+.classMaterial-editlayout .tsc-button .uploadTutorialVideo button.uploadVideoDel {
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+        padding-left: 0;
+}
+.classMaterial-editlayout .tsc-button .screenStudyMaterial .materialLoop img,
+.classMaterial-editlayout .screenAssignmentPopup .assignmentLoop img{
+    cursor: pointer;
+    margin-left: 20px;
+        padding-left: 0;
+}
+.screenUploadMaterialName .uploadedFile .replaceOuter {
+    margin-left: 15px;
+}
+.screenUploadMaterialName .uploadedFile,
+.screenAssignmentName .uploadedFile  {
+    display: inline-flex;
+    width: 100%;
+        border: none;
+    padding: 0px;
+}
+.screenUploadMaterialName .uploadedFile .study-mvideo,
+.screenAssignmentName .uploadedFile .study-mvideo{
+       display: inline-flex;
+    border: 1px solid #bbbbbb;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    color: #3c4b64;
+    padding: 7px 10px;
+    border-radius: 8px;
+        opacity: 1;
+    margin-bottom: 15px;
+    width: auto;
+}
+.screenAssignmentName .uploadedFile .study-mvideo .replaceOuter {
+    margin-left: 15px;
+}
+.classMaterial-editlayout .screenAssignmentPopup .assignmentLoop .study-mvideo{
+    display: inline-flex;
+    border: 1px solid #bbbbbb;
+    align-items: center;
+    height: min-content;
+    font-size: 12px;
+    font-weight: 500;
+    color: #3c4b64;
+    padding: 7px 10px;
+    border-radius: 8px;
+        opacity: 1;
+    margin-bottom: 15px;
+    width: auto;
+}
+.blueMessage {
+    color: #4da1ff;
+}
+
+
+.redMessage {
+    color: red;
+}
+.addtutorialpopup img.materialTrash {
+    height: auto!important;
+    max-height: 16px;
+}
+div#addTutorialMaterial .questionURL .form-group:first-child label:after,
+div#addTutorialAssignment .questionURL .form-group:first-child label:after {
+    content: ''!important;
+}

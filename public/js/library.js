@@ -1,0 +1,915 @@
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+function getWordCount(wordString) {
+  var words = wordString.split(" ");
+  words = words.filter(function(words) { 
+	return words.length > 0
+  }).length;
+  return words;
+}
+
+$(document).ready(function(){
+		
+	$(document).on('click','.dont-delete', function (e) {
+		$("body").css("padding-right","0px");
+		$("body").attr("data-padding-right","0px");
+	});
+	
+	var url_validate = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+	$('.doneUrlMaterial').click(function(){
+		var material_url = $('#tutorial_material_url').val();			
+		if(material_url.length != 0 && url_validate.test(material_url)){
+			var randomString = makeid(10);
+			var StudyMaterial = "<div rel="+randomString+" class='materialLoop "+randomString+"'><div><input type='hidden' name='material_url[]' value='"+material_url+"' />"+material_url+" <img class='materialTrash' src='"+$uploadDelVector+"' ></a></div></div>";
+			
+			var StudyMaterialOuter = "<div rel="+randomString+" class='materialLoop "+randomString+"'><div class='study-mvideo' >"+material_url+" <img class='materialTrash' src='"+$uploadDelVector+"' ></a></div></div>";
+			
+			$('.StudyMaterial').append(StudyMaterial);
+			$('.screenStudyMaterial').append(StudyMaterialOuter).removeClass('hide');
+			
+			$('#tutorial_material_url').css('border','1px solid #F4AC6C').val('');
+		}else{
+			$('#tutorial_material_url').css('border','1px solid red');
+		}
+	});
+	
+	$(document).on('click','.materialTrash',function(){		
+		var StudyMaterialChild = $(this).parent().parent().attr('rel');
+		$('.'+StudyMaterialChild).remove();
+	});
+	
+	$('.doneUrlAssignment').click(function(){
+		var assignment_url = $('#assignment_url').val();
+		if(assignment_url.length != 0 && url_validate.test(assignment_url)){
+			
+			var randomString = makeid(10);
+			var Assignment = "<div rel="+randomString+" class='assignmentLoop "+randomString+"'><div><input type='hidden' name='assignment_url[]' value='"+assignment_url+"' />"+assignment_url+" <img class='materialTrash' src='"+$uploadDelVector+"' ></a></div></div>";
+			
+			var AssignmentOuter = "<div rel="+randomString+" class='assignmentLoop "+randomString+"'><div class='study-mvideo'>"+assignment_url+" <img class='materialTrash' src='"+$uploadDelVector+"' ></a></div></div>";
+			
+			
+			$('.loopAssignmentPopup').append(Assignment).removeClass('hide');
+			
+			$('.screenAssignmentPopup').append(AssignmentOuter).removeClass('hide');
+			
+			$('#assignment_url').css('border','1px solid #F4AC6C').val('');
+		}else{
+			$('#assignment_url').css('border','1px solid red');
+		}
+	});
+	
+	$('.editMaterialDel').click(function(){
+		var materialID = $(this).attr('rel');
+		$(this).parent().remove();
+		$('.classMaterialDeletedList').append('<input type="hidden" name="deletedList[]" value="'+materialID+'" />');
+	});
+	
+	$('.editVideoDel').click(function(){		
+		$('.videoTutorialUrl').remove();
+		$('.addTutorialVideo').removeClass('hide');
+		$('#tutorialVideo').val("");
+		var materialID = $(this).attr('rel');
+		$('.classMaterialDeletedList').append('<input type="hidden" name="deletedList[]" value="'+materialID+'" />');
+	});
+	
+	$("#material_filename").change(function () {
+		var fileExtension = ['pdf'];
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			alert("Only formats are allowed : "+fileExtension.join(', '));
+			$(this).val("");
+		}
+	});	
+	
+	$('.loopTrash').click(function(){
+		var id = $(this).attr('rel');
+		$(this).parent().hide();
+		$.ajax({
+			url : $deleteTutorialMaterial,
+			type : 'post',
+			data : {id : id},
+			success : function(response){
+				
+			}
+		});
+	});
+	
+	$('.urlAssignment').click(function(){
+		$('.urlInputAssignment').css('display','flex');
+		$('.fileInputAssignment').hide();
+	});
+	
+	$('.fileAssignment').click(function(){
+		$('.urlInputAssignment').hide();
+		$('.fileInputAssignment').css('display','flex');
+	});
+	
+	$('.urlMaterial').click(function(){
+		$('.urlInputMaterial').css('display','flex');
+		$('.fileInputMaterial').hide();
+	});
+	
+	$('.fileMaterial').click(function(){
+		$('.urlInputMaterial').hide();
+		$('.fileInputMaterial').css('display','flex');
+	});
+	
+	$('.answerFormat').change(function(){
+		var answerFormat = $(this).val();
+		if(answerFormat == 1 || answerFormat == 2){
+			$('.practiAnsQues').removeClass('practiAnsBlank');
+			$('.practiceExamOption').addClass('hide');
+			$('.addWrittenAns').addClass('hide');
+			$('.addAudioRecord').addClass('hide');
+			$('.addNewOption').removeClass('hide');
+			$('.practiceExamDone').removeClass('hide');
+			$('.practiceExamOption').addClass('hide').html('');
+		}else if(answerFormat == 3){
+			$('.practiceExamOption').addClass('hide');
+			$('.addAudioRecord').addClass('hide');
+			$('.addNewOption').addClass('hide');
+			$('.addWrittenAns').removeClass('hide');
+			$('.practiceExamDone').removeClass('hide');
+		}else if(answerFormat == 4){
+			$('.practiceExamOption').addClass('hide');
+			$('.addWrittenAns').addClass('hide');
+			$('.addAudioRecord').removeClass('hide');
+			$('.addNewOption').addClass('hide');
+			$('.practiceExamDone').removeClass('hide');
+		}
+		$('#main_answer_id').val('');
+		
+	});
+	
+	$(document).on('click','.crossBtn',function(){	
+		$('#loader').show();
+		$(this).parent().parent().parent().remove();
+		var $answer_id = $(this).parent().parent().parent().attr('id');
+		$.ajax({
+			url : $admin_delete_answer,
+			type : 'post',
+			data : { answer_id: $answer_id },
+			success : function(response){
+				$('#loader').hide();
+			},
+			error : function(error){
+				$('#loader').hide();
+				alert('Something went wrong.');
+			}
+		});
+		
+	});
+	
+	$('#uploadQuestion').change(function () {
+		var fileExtension = ['jpg', 'png','jpeg'];
+		$('.uploadFileError').text('').addClass('hide');
+		$('.uploadFileName').addClass('hide');
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			$('.uploadFileError').html("Only formats are allowed : "+fileExtension.join(', ')).removeClass('hide');
+			$(this).val("");
+		}else{
+			var pdfName = $(this).val().split('\\').pop().toLowerCase();
+			var files_size = $(this)[0].files[0].size;
+			if(parseFloat($max_upload_size) <= parseFloat(files_size)){
+				$('.uploadFileError').text('File size should not exceed by '+$max_upload_size_mb+'MB.').removeClass('hide');
+				$(this).val("");
+				return true;
+			}
+			$('.checkMedia').val('1');
+			$('.uploadFileName p').html(pdfName);
+			$('.uploadFileName').removeClass('hide');
+		}
+	});
+	
+	$('#uploadAnswer').change(function () {
+		var fileExtension = ['jpg', 'png','jpeg'];
+		$('.uploadAnswerError').text('').addClass('hide');
+		$('.uploadFileName').addClass('hide');
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			$('.uploadAnswerError').text("Only formats are allowed : "+fileExtension.join(', ')).removeClass('hide');
+			$(this).val("");
+		}else{
+			var pdfName = $(this).val().split('\\').pop().toLowerCase();
+			var files_size = $(this)[0].files[0].size;
+			if(parseFloat($max_upload_size) <= parseFloat(files_size)){
+				$('.uploadAnswerError').text('File size should not exceed by '+$max_upload_size_mb+'MB.').removeClass('hide');
+				$(this).val("");
+				return true;
+			}
+			$('.uploadFileName p').html(pdfName);
+			$('.uploadFileName').removeClass('hide');
+		}
+	});
+	
+	$('#uploadAnswerWrite').change(function () {
+		var fileExtension = ['mp3'];
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			alert("Only formats are allowed : "+fileExtension.join(', '));
+			$('.uploadAnswerWrite p').html('');
+			$('.uploadAnswerWrite').addClass('hide');
+			$(this).val("");
+		}else{
+			var pdfName = $(this).val().split('\\').pop().toLowerCase();
+			var files_size = $(this)[0].files[0].size;
+			if(parseFloat($max_upload_size) <= parseFloat(files_size)){
+				alert('File size should not exceed by '+$max_upload_size_mb+'MB.');
+				$(this).val("");
+				$('.uploadAnswerWrite p').html('');
+				$('.uploadAnswerWrite').addClass('hide');
+				return true;
+			}
+			
+			$('.uploadAnswerWrite p').html(pdfName);
+			$('.uploadAnswerWrite').removeClass('hide');
+		}
+	});
+	
+	/*=========add tutorial video start ============*/
+	$('#tutorialVideo').change(function () {
+		$('#tutorial_video_url').val('');
+		$('.uploadVideoError').text('').addClass('hide');
+		var fileExtension = ['avi','mp4','mpeg'];
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			$('.uploadVideoError').text("Only formats are allowed : "+fileExtension.join(', ')).removeClass('hide');
+			$(this).val("");
+		}else{
+			var pdfName = $(this).val().split('\\').pop().toLowerCase();
+			var files_size = $(this)[0].files[0].size;
+			if(parseFloat($max_upload_size) <= parseFloat(files_size)){
+				$('.uploadVideoError').text('File size should not exceed by '+$max_upload_size_mb+'MB.').removeClass('hide');
+				$(this).val("");
+				return true;
+			}
+			
+			$('.uploadTutorialVideo p').html(pdfName);
+			$('.uploadTutorialVideo').removeClass('hide');
+			
+			$('.uploadVideo p').html(pdfName);
+			$('.uploadVideo').removeClass('hide');
+			$('.uploadVideoBtn').addClass('hide');
+		}
+	});	
+	
+	$('#tutorial_video_url').keyup(function(){
+		$('#tutorialVideo').val("");
+		$('.uploadVideo p').html('');
+		$('.uploadVideo').addClass('hide');
+		$('.uploadVideoBtn').removeClass('hide');		
+	});
+	
+	$('#tutorial_video_url').change(function(){
+		$('#tutorialVideo').val("");
+		$('.uploadVideo p').html('');
+		$('.uploadVideo').addClass('hide');
+		$('.uploadVideoBtn').removeClass('hide');		
+	});
+	
+	$('.uploadVideoDel').click(function(){		
+		$('.uploadVideo').addClass('hide');
+		$('.uploadVideoBtn').removeClass('hide');
+		$('#tutorialVideo').val("");	
+		$('#tutorial_video_url').val("");
+		$('.uploadTutorialVideo').addClass('hide');
+	});
+	
+	$('.addTutorialDone').click(function(){		
+		var tutorial_video_url = $.trim($('#tutorial_video_url').val());		
+		var tutorialVideo = $.trim($('#tutorialVideo').val());		
+		if(tutorial_video_url.length > 5){
+			$('.uploadTutorialVideo').removeClass('hide');
+			$('.uploadTutorialVideo p').html(tutorial_video_url);
+		}else if(tutorialVideo.length == 0){
+			$('.uploadTutorialVideo').addClass('hide');
+			$('.uploadTutorialVideo p').html('');
+		}		
+	});
+	
+	/*=========add tutorial video end ============*/
+	
+	
+	/*=========add Study Material start ============*/
+	
+	$('#tutorialMaterial').change(function () {
+		var fileExtension = ['png','jpeg','jpg','pdf','avi','mp4','mpeg'];
+		$('.uploadMaterialError').text('').addClass('hide');
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			$('.uploadMaterialError').text("Only formats are allowed : "+fileExtension.join(', ')).removeClass('hide');
+			$(this).val("");
+		}else{			
+			var file_data = $(this)[0].files[0];
+			if(parseFloat($max_upload_size) <= parseFloat(file_data.size))
+			{
+				$('.uploadMaterialError').text('File size should not exceed by '+$max_upload_size_mb+'MB.').removeClass('hide');
+				return true;
+			}
+			
+			$('#loader').show();
+			var datos = new FormData();
+			datos.append('upload_material', file_data);
+			datos.append('class_type', 0);
+			datos.append('material_type', 1);
+			$.ajax({
+				url: $admin_upload_tutorial,
+				method : "POST",
+				data : datos,
+				processData: false,
+				contentType: false,
+				beforeSend: function() {
+					$('#loader').show();
+				},
+				success: function(data, textStatus, jqXHR){
+					$('#loader').hide();
+					
+					var createHtml = '<div class="uploadedFile uploadedFile-'+data.material_doc+'"><div><input type="hidden" name="uploadedFile[]" value="'+data.material_doc+'" /> <div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right"><img src="'+$uploadDelVector+'" ></a></div></div></div>';
+					
+					var createHtmlOuter = '<div class="uploadedFile uploadedFile-'+data.material_doc+'"><div class="study-mvideo" ><div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right"><img src="'+$uploadDelVector+'" ></a></div></div></div>';
+					
+					$('#tutorialMaterial').val('');
+					$('.uploadMaterialName').append(createHtml).removeClass('hide');
+					$('.screenUploadMaterialName').append(createHtmlOuter).removeClass('hide');
+				},
+				error : function(error){
+					var errors = JSON.parse(error.responseText);
+					var keys = Object.keys(errors);
+					
+					keys.forEach(function(key) {
+						$(".uploadMaterialError").html(errors[key][0]).removeClass('hide');
+					});
+					if($(".uploadMaterialError").html().length == 0){
+						$('.uploadMaterialError').text('Something went wrong. Please try again!').removeClass('hide');
+					}
+					
+					$('#tutorialMaterial').val('');
+					$('#loader').hide();
+				}
+			});
+			
+		}
+	});	
+	
+	$('#uploadAssignment').change(function () {
+		var fileExtension = ['png','jpeg','jpg','pdf'];
+		$('.uploadAssignmentError').text('').addClass('hide');
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			$('.uploadAssignmentError').text("Only formats are allowed : "+fileExtension.join(', ')).removeClass('hide');
+			$(this).val("");
+		}else{
+			var file_data = $(this)[0].files[0];
+			if(parseFloat($max_upload_size) <= parseFloat(file_data.size))
+			{
+				$('.uploadAssignmentError').text('File size should not exceed by '+$max_upload_size_mb+'MB.').removeClass('hide');
+				return true;
+			}
+			
+			$('#loader').show();
+			var datos = new FormData();
+			datos.append('upload_material', file_data);
+			datos.append('class_type', 1);
+			datos.append('material_type', 1);
+			$.ajax({
+				url: $admin_upload_tutorial,
+				method : "POST",
+				data : datos,
+				processData: false,
+				contentType: false,
+				beforeSend: function() {
+					$('#loader').show();
+				},
+				success: function(data, textStatus, jqXHR){
+					$('#loader').hide();
+					
+					var createHtml = '<div class="uploadedFile uploadedFile-'+data.material_doc+'"><div><input type="hidden" name="uploadedAssignmentFile[]" value="'+data.material_doc+'" /> <div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right"><img src="'+$uploadDelVector+'" ></a></div></div></div>';
+					
+					var createHtmlOuter = '<div class="uploadedFile uploadedFile-'+data.material_doc+'"><div class="study-mvideo" ><div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right"><img src="'+$uploadDelVector+'" ></a></div></div></div>';
+					
+					$('#uploadAssignment').val('');
+					
+					$('.uploadAssignmentName').append(createHtml).removeClass('hide');
+					$('.screenAssignmentName').append(createHtmlOuter).removeClass('hide');
+				},
+				error : function(error){
+					var errors = JSON.parse(error.responseText);
+					var keys = Object.keys(errors);
+					
+					keys.forEach(function(key) {
+						$(".uploadAssignmentError").html(errors[key][0]).removeClass('hide');
+					});
+					if($(".uploadAssignmentError").html().length == 0){
+						$('.uploadAssignmentError').text('Something went wrong. Please try again!').removeClass('hide');
+					}
+					$('#uploadAssignment').val('');
+					$('#loader').hide();
+				}
+			});
+			
+		}
+	});	
+	
+	/*=========add Study Material end ============*/
+	
+	$('.imguploaded').change(function () {
+		var materialType = $('.materialType').val();
+		var materialTypeData = $('#file_format'+materialType).val();
+		if(materialType.length == 0){
+			alert("Please select Material Type First!");
+		}
+		var fileExtension = materialTypeData.split(',');
+		
+		if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+			alert("Only formats are allowed : "+fileExtension.join(', '));
+			$(this).val("");
+		}else{
+			var file_data = $(this)[0].files[0];
+			if(parseFloat($max_upload_size) <= parseFloat(file_data.size))
+			{
+				alert('File size should not exceed by '+$max_upload_size_mb+'MB.');
+				return true;
+			}
+			$('#loader').show();
+			var datos = new FormData();
+			datos.append('upload_material', file_data);
+			datos.append('material_type', 1);
+			$.ajax({
+				url: $admin_upload_material,
+				method : "POST",
+				data : datos,
+				processData: false,
+				contentType: false,
+				beforeSend: function() {
+					$('#loader').show();
+				},
+				success: function(data, textStatus, jqXHR){
+					$('#loader').hide();
+					
+					var createHtml = '<div class="uploadedFile uploadedFile-'+data.material_doc+'" ><input type="hidden" name="uploadedFile[]" value="'+data.material_doc+'" /> <div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right">Replace</a></div></div>';
+					
+					$('.uploadedFileList').html(createHtml);
+					$('.upload-options').addClass('hide');
+					$('.imguploaded').val('');
+					
+				},
+				error : function(error){
+					alert('File size should not exceed by '+$max_upload_size_mb+'MB.');
+					$('#loader').hide();
+					$('.imguploaded').val('');
+				}
+			});
+			
+			
+		}
+	});
+	
+	$('.uploadfile-box').on('drop', function (e) {
+		e.stopPropagation();
+		e.preventDefault();
+		var file = e.originalEvent.dataTransfer.files;
+		
+		var datos = new FormData();
+		datos.append('upload_material', file[0]);
+		datos.append('material_type', 1);
+		$.ajax({
+			url: $admin_upload_material,
+			method : "POST",
+			data : datos,
+			processData: false,
+			contentType: false,
+			beforeSend: function() {
+				$('#loader').show();
+			},
+			success: function(data, textStatus, jqXHR){
+				$('#loader').hide();
+				
+				var createHtml = '<div class="uploadedFile"><input type="hidden" name="uploadedFile[]" value="'+data.material_doc+'" /> <div class="pull-left">'+data.original_name+'</div><div class="replaceOuter pull-right"><a href="javascript:void(0)" rel="'+data.material_doc+'" class="replaceMaterial float-right">Replace</a></div></div>';
+				
+				$('.uploadedFileList').append(createHtml);
+				
+			}
+		});
+		
+	});
+	
+	$(document).on('click','.replaceMaterial',function(){
+		
+		var replaceMaterialID = $(this).attr('rel');
+		$('.uploadedFile-'+replaceMaterialID).remove();
+		$('.upload-options').removeClass('hide');
+	});
+	
+	$('.uploadDel').click(function(){
+		
+		$('.uploadFileName').addClass('hide');
+		$('.uploadFileName p').html('');
+		$('#uploadQuestion').val("");
+		
+		$('.uploadAnswerWrite').addClass('hide');
+		$('#uploadAnswerWrite').val("");
+		
+			
+	});
+	
+	$('.uploadDelQuestion').click(function(){
+		$('.checkMedia').val('0');
+	});
+	
+	$('.cancelQuestionBtn').click(function(){
+		$('.uploadFileName').addClass('hide');
+		$('#uploadQuestion').val("");
+		$('.questionUrl').val("");		
+	});
+	
+	
+	$('.optionCheck1').click(function(){
+		$('#loader').show();
+		var $question_id = $('#question_id').val();
+		var $exam_id = $('#exam_id').val();
+		var $answerFormat = $( ".answerFormat option:selected" ).val();
+		if($answerFormat == 1){
+			$checkOptions = 'checkbox';
+		}else if($answerFormat == 2){
+			$checkOptions = 'radio';
+		}
+		$.ajax({
+			url : $admin_insert_answer,
+			type : 'post',
+			data : { exam_id: $exam_id, question_id : $question_id , answer_format : $answerFormat },
+			success : function(response){
+				var optionsHtml = '<div class="examOptionRow" id="'+response.answer_id+'" ><div class="optionCheck"><span class="optionCircle"></span><input type="text" required class="form-control" name="answer_text['+response.answer_id+']" placeholder="Type Here" /></div><div class="optionRadio"><div class="typingOptionImg"><img src="'+$imgIcoGray+'" /></div><div class="optionRadioBtn"><label class="checkcontainer">Mark as correct<input type="'+$checkOptions+'" value="'+response.answer_id+'" rel="'+$answerFormat+'" required class="is_correct" name="is_correct"><span class="radiobtn"></span></label></div><div class="optionCross"><button rel="'+response.answer_id+'" type="button" class="crossBtn"><img src="'+$Subtract+'"  /></button></div></div></div>';
+				
+				$('.practiceExamOption').removeClass('hide');
+				$('.practiceExamOption').append(optionsHtml);
+				$('#loader').hide();
+			}
+		});
+		
+		
+	});
+	
+	$(document).on('click','.is_correct',function(){
+	
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			var $statusOp = 0;
+		}else{
+			$(this).addClass('active');
+			var $statusOp = 1;
+		}
+		var $answerFormat = $(this).attr('rel');
+		var $question_id = $('#question_id').val();
+		var $answer_id = $(this).val();
+		$('#loader').show();
+		$.ajax({
+			url : $admin_update_answer,
+			type : 'post',
+			data : { answerFormat: $answerFormat, answer_id : $answer_id , question_id  : $question_id, statusOp : $statusOp },
+			success : function(response){
+				$('#loader').hide();
+			}
+		});
+	});
+	
+	$(document).on('click','.typingOptionImg',function(){
+		var $answer_id = $(this).parent().parent().attr('id'); 
+		$('.answer_id').val($answer_id);
+		$('.editUploadFile').addClass('editUploadFile-'+$answer_id);
+		$(this).addClass('active');
+		$('#loader').show();
+		$.ajax({
+			url : $admin_get_answer_pdf,
+			type : 'post',
+			data : {  answer_id : $answer_id  },
+			success : function(response){
+				$('#loader').hide();
+				$('#uploadAnswer').val('');
+				if(response.answer.original_image_name.length <= 0){
+					$('#answerModel .uploadFileName').addClass('hide');
+				}else{
+					$('#answerModel .uploadFileName p').html(response.answer.original_image_name);
+					$('#answerModel .uploadFileName').removeClass('hide');
+				}
+				$('#answerModel').modal('show');
+			},
+			error : function(error){
+				$('#loader').hide();
+				alert(error);
+			}
+		});
+		
+	});
+	
+	$('.materialType').change(function(){
+		var materialType = $(this).val();
+		var materialTypeData = $('#file_format'+materialType).val();
+		
+		if(materialType == undefined || materialType == ''){
+			$('.formatUpload span').html('');
+		}else{
+			$('.formatUpload span').html('Accepted File formats <br> '+materialTypeData);
+		}
+	});
+	
+	$('#update_media_answer').submit(function(e){
+		e.preventDefault();
+		
+		$('#loader').show();
+		var file_data = $('#uploadAnswer')[0].files[0];	
+		var imageStatus = 0;
+		var datos = new FormData();	
+		var $answer_id = $('.answer_id').val();
+		datos.append('answer_id', $answer_id);
+		
+		$uploadFileNameText = $('.editUploadFile-'+$answer_id+' p').html();
+		
+		if(file_data == undefined && $uploadFileNameText.length > 1) {
+			$('#loader').hide();
+			$('#uploadAnswer').val('');
+			$('#answerModel').modal('hide');
+			$('.typingOptionImg').removeClass('active');
+			return false;
+		}
+		
+		if(file_data != undefined) {
+			datos.append('pdf', file_data);
+			imageStatus = 1;
+		}
+		
+		$.ajax({
+			url: $admin_update_answer_pdf,
+			method : "POST",
+			data : datos,
+			processData: false,
+			contentType: false,
+			beforeSend: function() {
+				$('#loader').show();
+			},
+			success: function(data, textStatus, jqXHR){
+				$('#loader').hide();
+				$('#uploadAnswer').val('');
+				$('#answerModel').modal('hide');
+				if(imageStatus == 1){
+					$('.typingOptionImg.active img').attr('src',$imgIco);
+				}else{
+					$('.typingOptionImg.active img').attr('src',$imgIcoGray);
+				}
+				$('#uploadAnswer').val();
+				$('.uploadFileName p').html('');
+				$('.uploadFileName').addClass('hide');
+				$('.typingOptionImg').removeClass('active');
+			},
+			error : function(error){
+				$('#uploadAnswer').val('');
+				alert('Something went worng. Please try again!');
+				$('#loader').hide();
+				$('.imguploaded').val('');
+			}
+		});
+	});
+	
+	$('.materialTypeSelect').change(function(){
+		$('#loader').show();
+		var $materialType = $(this).val();
+		$.ajax({
+			url: $admin_select_material_type,
+			method : "POST",
+			data : { materialType : $materialType , course_id : $course_id },
+			beforeSend: function() {
+				$('#loader').show();
+			},
+			success: function(data, textStatus, jqXHR){
+				$('#loader').hide();
+				$('#ajaxStudySorted').html(data);
+			},
+			error : function(error){
+				alert('Something went worng. Please try again!');
+				$('#loader').hide();
+			}
+		});
+	});
+	
+	$('.examLimit').change(function(){
+		var exam_limit = $(".examLimit").val();
+		var exam_title = $("input[name=exam_title]").val();
+		if(exam_limit != undefined && exam_title.length > 0){
+			$('.addQuestionBtn').removeAttr('disabled');
+		}else{
+			$('.addQuestionBtn').attr('disabled',true);
+		}
+	});
+	
+	$('input[name=exam_title]').change(function(){
+		var exam_limit = $(".examLimit").val();
+		var exam_title = $("input[name=exam_title]").val();
+		if(exam_limit != undefined && exam_title.length > 0){
+			$('.addQuestionBtn').removeAttr('disabled');
+		}else{
+			$('.addQuestionBtn').attr('disabled',true);
+		}
+	});
+	
+	$('.characterLimit').change(function(){
+		var $words = $(this).val();
+		if($words == 1){
+			$words = $charLimit1;
+		}else if($words == 2){
+			$words = $charLimit2;
+		}else if($words == 3){
+			$words = $charLimit3;
+		}else if($words == 4){
+			$words = $charLimit4;
+		}else if($words == 5){
+			$words = $charLimit5;
+		}else if($words == 6){
+			$words = $charLimit6;
+		}
+		
+		
+		$('#pending_words').html($words);
+	});
+		
+	$.validator.addMethod("lettersonly", function(value, element){
+		return this.optional(element) || /^[a-z," "]+$/i.test(value);
+	}, "Should contain letters only.");
+	
+	
+	$.validator.addMethod("wordCount",
+	   function(value, element, params) {
+		  var count = getWordCount(value);
+		  if(count <= params) {
+			 return true;
+		  }
+	   },
+	   $.validator.format("A minimum of {0} words is required here.")
+	);
+		
+	$("#add_tutorial").validate({
+	  rules: {
+		tutorial_title: {
+			wordCount: 20,
+			required: true,
+		},
+		tutor_name: {
+			wordCount: 20,
+			required: true,
+			lettersonly : true
+		},
+		description: {required: true},
+	  },
+	  messages: {
+		tutorial_title: {
+			required: "Please add tutorial title. ",
+			wordCount: "Letters should not exceed 20 words.",
+		},
+		tutor_name: {
+		  required: "Please add tutor name. ",
+		  lettersonly: "Tutor name should contain letters only. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+		description: {
+		  required: "Please add description. ",
+		},
+	  }
+	});
+	
+	$("#edit_tutorial").validate({
+	  rules: {
+		tutorial_title: {
+			wordCount: 20,
+			required: true,
+		},
+		tutor_name: {
+			wordCount: 20,
+			required: true,
+			lettersonly : true
+		},
+		description: {required: true},
+	  },
+	  messages: {
+		tutorial_title: {
+			required: "Please add tutorial title. ",
+			wordCount: "Letters should not exceed 20 words.",
+		},
+		tutor_name: {
+		  required: "Please add tutor name. ",
+		  lettersonly: "Tutor name should contain letters only. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+		description: {
+		  required: "Please add description. ",
+		},
+	  }
+	});
+	
+	$("#add_material").validate({
+	  rules: {
+		material_type: "required",
+		material_title: {
+			wordCount: 20,
+			required: true,
+		},
+	  },
+	  messages: {
+		material_type: "Please select material type. ",
+		material_title: {
+		  required: "Please add new title. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+	  }
+	});
+	
+	$("#edit_material").validate({
+	  rules: {
+		material_type: "required",
+		material_title: {
+			wordCount: 20,
+			required: true,
+		},
+	  },
+	  messages: {
+		material_type: "Please select material type. ",
+		material_title: {
+		  required: "Please add new title. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+	  }
+	});
+
+	
+	$("#add_practice").validate({
+	  rules: {
+		exam_limit: "required",
+		exam_title: {required: true},
+	  },
+	  messages: {
+		exam_limit: "Please select exam time limit. ",
+		exam_title: {
+		  required: "Please add new title. ",
+		},
+	  }
+	});
+	
+	$("#add_question").validate({
+	  rules: {
+		answer_format: "required",
+		question_title: {required: true},
+	  },
+	  messages: {
+		answer_format: "Please select answer format. ",
+		question_title: {
+		  required: "Please add new question title. ",
+		},
+	  }
+	});
+	 
+	$("#add_course").validate({
+	  rules: {
+		courses_title: {
+			wordCount: 20,
+			required: true,
+		},
+		courses_type: {required: true},
+	  },
+	  messages: {
+		courses_title: {
+		  required: "Please add course title. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+		courses_type: {
+		  required: "Please select courses type. ",
+		},
+	  }
+	});
+	
+	$("#edit_course").validate({
+	  rules: {
+		courses_title: {
+			wordCount: 20,
+			required: true,
+		},
+	  },
+	  messages: {
+		courses_title: {
+		  required: "Please add course title. ",
+		  wordCount: "Letters should not exceed 20 words.",
+		},
+	  }
+	});
+	
+	
+	$('.courseLi').click(function(){
+		var $layout = $(this).attr('rel');
+		$.ajax({
+			url: $admin_courses_change_status,
+			method : "POST",
+			data : { layout : $layout },
+			success: function(data, textStatus, jqXHR){}
+		});
+	});
+	
+	
+});
